@@ -1,18 +1,14 @@
 ---
 name: variant-analysis
 description: ToolUniverse workflow — Variant Analysis
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-variant-analysis
+license: MIT
 metadata:
----
-
----
-name: tooluniverse-variant-analysis
-description: Production-ready VCF processing, variant annotation, mutation analysis, and structural variant (SV/CNV) interpretation for bioinformatics questions. Parses VCF files (streaming, large files), classifies mutation types (missense, nonsense, synonymous, frameshift, splice, intronic, intergenic) and structural variants (deletions, duplications, inversions, translocations), applies VAF/depth/quality/consequence filters, annotates with ClinVar/dbSNP/gnomAD/CADD via ToolUniverse, interprets SV/CNV clinical significance using ClinGen dosage sensitivity scores, computes variant statistics, and generates reports. Solves questions like "What fraction of variants with VAF < 0.3 are missense?", "How many non-reference variants remain after filtering intronic/intergenic?", "What is the pathogenicity of this deletion affecting BRCA1?", or "Which dosage-sensitive genes overlap this CNV?". Use when processing VCF files, annotating variants, filtering by VAF/depth/consequence, classifying mutations, interpreting structural variants, assessing CNV pathogenicity, comparing cohorts, or answering variant analysis questions.
+    skill-author: K-Dense Inc.
 ---
 
 # Variant Analysis and Annotation
 
-Production-ready VCF processing and variant annotation skill combining local bioinformatics computation with ToolUniverse database integration. Designed to answer bioinformatics analysis questions about VCF data, mutation classification, variant filtering, and clinical annotation.
+Production-ready VCF processing, variant annotation, mutation analysis, and structural variant (SV/CNV) interpretation for bioinformatics questions. Parses VCF files (streaming, large files), classifies mutation types (missense, nonsense, synonymous, frameshift, splice, intronic, intergenic) and structural variants (deletions, duplications, inversions, translocations), applies VAF/depth/quality/consequence filters, annotates with ClinVar/dbSNP/gnomAD/CADD via ToolUniverse, interprets SV/CNV clinical significance using ClinGen dosage sensitivity scores, computes variant statistics, and generates reports. Solves questions like "What fraction of variants with VAF < 0.3 are missense?", "How many non-reference variants remain after filtering intronic/intergenic?", "What is the pathogenicity of this deletion affecting BRCA1?", or "Which dosage-sensitive genes overlap this CNV?". Use when processing VCF files, annotating variants, filtering by VAF/depth/consequence, classifying mutations, interpreting structural variants, assessing CNV pathogenicity, comparing cohorts, or answering variant analysis questions.
 
 ## When to Use This Skill
 
