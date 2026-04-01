@@ -1,7 +1,9 @@
 ---
 name: xlsx
 description: Extract and preview data from Excel and CSV spreadsheets for scientific analysis
+license: MIT
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ## Overview
