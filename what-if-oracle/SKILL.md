@@ -1,3 +1,11 @@
+---
+name: what-if-oracle
+description: Structured scenario analysis tool for exploring uncertain futures and making strategic decisions
+license: MIT
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # What-If Oracle Skill — Full Content Extract
 
 ## Overview
