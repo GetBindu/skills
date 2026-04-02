@@ -1,7 +1,9 @@
 ---
 name: tdc
 description: Predict binding-related effects (ADMET) using TDC models from Hugging Face
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 # TDC – Binding Effect Prediction
