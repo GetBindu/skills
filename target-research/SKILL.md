@@ -1,8 +1,9 @@
 ---
 name: target-research
 description: ToolUniverse workflow — Target Research
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-target-research
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ---
