@@ -1,3 +1,11 @@
+---
+name: research-survey
+description: Deep analysis methodology for academic papers with LaTeX source code reading, formula extraction, and code mapping
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # Research Survey Workflow Summary
 
 This skill activates when a prompt contains `/research-survey` and provides a structured deep-analysis methodology for academic papers.
