@@ -1,10 +1,9 @@
 ---
-name: text_to_lora
+name: text-to-lora
 description: Generate task-specific LoRA adapters from natural language descriptions using a trained T2L model for instant transformer adaptation.
-source_type: github
-auth_required: true
-repository_url: "https://github.com/SakanaAI/text-to-lora"
-reference_url: "https://openreview.net/forum?id=zWskCdu3QA"
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ## text_to_lora
