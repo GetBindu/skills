@@ -1,3 +1,11 @@
+---
+name: research-implement
+description: Structured protocol for transforming research plans into executable code with real execution results
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # Research Implement Workflow Summary
 
 The `research-implement` skill is a structured protocol for transforming research plans into executable code. Here are the key aspects:
