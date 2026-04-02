@@ -1,8 +1,9 @@
 ---
 name: sequence-retrieval
 description: ToolUniverse workflow — Sequence Retrieval
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-sequence-retrieval
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ---
