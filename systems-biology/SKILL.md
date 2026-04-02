@@ -1,8 +1,9 @@
 ---
 name: systems-biology
 description: ToolUniverse workflow — Systems Biology
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-systems-biology
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ---
