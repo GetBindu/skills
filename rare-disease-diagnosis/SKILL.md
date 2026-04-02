@@ -1,13 +1,9 @@
 ---
 name: rare-disease-diagnosis
-description: ToolUniverse workflow — Rare Disease Diagnosis
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-rare-disease-diagnosis
-metadata:
----
-
----
-name: tooluniverse-rare-disease-diagnosis
 description: Provide differential diagnosis for patients with suspected rare diseases based on phenotype and genetic data. Matches symptoms to HPO terms, identifies candidate diseases from Orphanet/OMIM, prioritizes genes for testing, interprets variants of uncertain significance. Use when clinician asks about rare disease diagnosis, unexplained phenotypes, or genetic testing interpretation.
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
 ---
 
 # Rare Disease Diagnosis Advisor
