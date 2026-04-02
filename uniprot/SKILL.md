@@ -1,7 +1,9 @@
 ---
 name: uniprot
 description: "Protein sequence, function, and annotation lookup. Query MUST be a bare gene symbol or protein name — 1 to 3 words maximum. Valid examples: 'KRAS', 'EGFR', 'BTK', 'TP53', 'Bruton tyrosine kinase', 'P01116'. If the topic is 'sotorasib KRAS G12C', the correct query is 'KRAS'. If the topic is 'imatinib BCR-ABL resistance', the correct query is 'BCR-ABL'. Strip the drug name, mutation label, and all mechanism words — pass only the protein or gene name."
+license: Unknown
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 # UniProt Protein Lookup

@@ -1,7 +1,9 @@
 ---
 name: tooluniverse
 description: Access 1000+ scientific tools from Harvard's ToolUniverse — bioinformatics, drug discovery, genomics, clinical research, and more
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 # ToolUniverse
