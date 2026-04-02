@@ -1,3 +1,11 @@
+---
+name: research-plan
+description: Four-part implementation workflow for research projects with dataset, model, training, and testing plans
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # Research Plan Summary
 
 This document outlines a four-part implementation workflow for research projects. Here are the key components:
