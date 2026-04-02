@@ -1,3 +1,11 @@
+---
+name: usfiscaldata
+description: US Treasury Fiscal Data API
+license: MIT
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # US Fiscal Data
 
 US Treasury Fiscal Data API. Free, no authentication required. 54 datasets, 182+ tables covering national debt, federal spending, revenue, exchange rates, savings bonds, and interest rates.
