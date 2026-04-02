@@ -1,8 +1,9 @@
 ---
 name: spatial-transcriptomics
 description: ToolUniverse workflow — Spatial Transcriptomics
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-spatial-transcriptomics
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ---
