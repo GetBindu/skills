@@ -1,8 +1,7 @@
 ---
 name: protein-structure-retrieval
 description: ToolUniverse workflow — Protein Structure Retrieval
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-protein-structure-retrieval
-metadata:
+metadata: {}
 ---
 
 ---

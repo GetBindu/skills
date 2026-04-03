@@ -1,3 +1,11 @@
+---
+name: research-review
+description: Comprehensive peer review workflow for ML research implementations with atomic concept verification and performance assessment
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # Claude Code Research Review Guide
 
 This document outlines a comprehensive peer review workflow for ML research implementations, with three key phases:

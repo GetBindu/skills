@@ -1,3 +1,11 @@
+---
+name: solublempnn
+description: SolubleMPNN solubility-optimized sequence design
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # SolubleMPNN Solubility-Optimized Sequence Design
 
 ProteinMPNN variant trained to design sequences with higher solubility in aqueous solution. Reduces aggregation propensity and improves expression yields in E. coli and cell-free systems.

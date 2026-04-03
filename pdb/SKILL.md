@@ -1,7 +1,7 @@
 ---
 name: pdb
-description: "3D protein structure search via RCSB PDB. Input MUST be a protein/gene name (e.g. 'KRAS', 'EGFR', 'BTK') or a 4-character PDB ID (e.g. '6OIM'). Returns zero results for drug/chemistry phrases such as 'covalent inhibitors' or 'warhead selectivity'. Strip all drug qualifiers and pass only the target protein name or PDB ID."
-metadata:
+description: 3D protein structure search via RCSB PDB. Input MUST be a protein/gene name (e.g. 'KRAS', 'EGFR', 'BTK') or a 4-character PDB ID (e.g. '6OIM'). Returns zero results for drug/chemistry phrases such as 'covalent inhibitors' or 'warhead selectivity'. Strip all drug qualifiers and pass only the target protein name or PDB ID.
+metadata: {}
 ---
 
 # PDB - Protein Data Bank

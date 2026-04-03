@@ -1,8 +1,7 @@
 ---
 name: precision-medicine-stratification
 description: ToolUniverse workflow — Precision Medicine Stratification
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-precision-medicine-stratification
-metadata:
+metadata: {}
 ---
 
 ---

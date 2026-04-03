@@ -1,7 +1,9 @@
 ---
 name: sequence
 description: Analyze biological sequences using Biopython - translate, align, parse FASTA/GenBank
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 # Sequence Analysis

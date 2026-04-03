@@ -1,10 +1,9 @@
 ---
 name: symtorch
 description: Approximate deep learning model components with symbolic equations using PySR
-source_type: github
-auth_required: false
-repository_url: "https://github.com/elizabethsztan/InterpretSR"
-reference_url: "https://arxiv.org/abs/2602.21307"
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ## symtorch

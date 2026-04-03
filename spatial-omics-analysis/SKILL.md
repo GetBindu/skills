@@ -1,8 +1,9 @@
 ---
 name: spatial-omics-analysis
 description: ToolUniverse workflow — Spatial Omics Analysis
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-spatial-omics-analysis
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ---

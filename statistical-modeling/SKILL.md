@@ -1,8 +1,9 @@
 ---
 name: statistical-modeling
 description: ToolUniverse workflow — Statistical Modeling
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-statistical-modeling
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ---

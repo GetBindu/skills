@@ -1,8 +1,7 @@
 ---
 name: precision-oncology
 description: ToolUniverse workflow — Precision Oncology
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-precision-oncology
-metadata:
+metadata: {}
 ---
 
 ---

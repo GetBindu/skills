@@ -1,8 +1,9 @@
 ---
 name: single-cell
 description: ToolUniverse workflow — Single Cell
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-single-cell
+license: MIT license
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ---

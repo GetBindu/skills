@@ -1,3 +1,11 @@
+---
+name: research-experiment
+description: Workflow for conducting comprehensive research experiments with full training, ablation studies, and iterative analysis
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # Research Experiment Skill Summary
 
 This skill defines a workflow for conducting comprehensive research experiments in machine learning projects. Here's the concise breakdown:

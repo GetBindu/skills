@@ -1,7 +1,9 @@
 ---
 name: pubmed
 description: Search PubMed for scientific literature and retrieve abstracts
+license: Unknown
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 # PubMed Search

@@ -1,8 +1,7 @@
 ---
 name: phylogenetics
 description: ToolUniverse workflow — Phylogenetics
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-phylogenetics
-metadata:
+metadata: {}
 ---
 
 ---

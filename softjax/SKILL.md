@@ -1,10 +1,9 @@
 ---
 name: softjax
 description: Soft differentiable drop-in replacements for non-differentiable JAX functions (abs, relu, sort, argmax, comparison, logical operators, etc.) with adjustable softening strength.
-source_type: github
-auth_required: false
-repository_url: "https://github.com/a-paulus/softjax"
-reference_url: "https://arxiv.org/abs/2603.08824"
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
 ---
 
 ## softjax

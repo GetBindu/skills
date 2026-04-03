@@ -1,7 +1,7 @@
 ---
 name: pubchem
 description: Search PubChem for chemical compounds, properties, and identifiers
-metadata:
+metadata: {}
 ---
 
 # PubChem Compound Lookup

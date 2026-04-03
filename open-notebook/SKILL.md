@@ -1,6 +1,10 @@
-# Open Notebook
+---
+name: open-notebook
+description: Self-hosted research platform for organizing PDFs, videos, audio, web pages with AI-powered chat
+metadata: {}
+---
 
-Self-hosted research platform (MIT license) — organizes PDFs, videos, audio, web pages, and text into searchable notebooks with AI-powered chat. NotebookLM alternative with full data ownership.
+# Open Notebook
 
 ## Features
 

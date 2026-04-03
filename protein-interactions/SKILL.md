@@ -1,8 +1,7 @@
 ---
 name: protein-interactions
 description: ToolUniverse workflow — Protein Interactions
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-protein-interactions
-metadata:
+metadata: {}
 ---
 
 ---

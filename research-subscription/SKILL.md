@@ -1,3 +1,11 @@
+---
+name: research-subscription
+description: Handles scheduled and recurring tasks like literature digests, delayed reports, and reminders with time-based scheduling and delivery options
+license: MIT license
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # Research Subscription Skill Summary
 
 This skill handles **scheduled and recurring tasks** like literature digests, delayed reports, and reminders.
