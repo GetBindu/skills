@@ -1,8 +1,7 @@
 ---
 name: polygenic-risk-score
 description: ToolUniverse workflow — Polygenic Risk Score
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-polygenic-risk-score
-metadata:
+metadata: {}
 ---
 
 ---
