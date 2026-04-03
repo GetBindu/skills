@@ -1,8 +1,7 @@
 ---
 name: proteomics-analysis
 description: ToolUniverse workflow — Proteomics Analysis
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-proteomics-analysis
-metadata:
+metadata: {}
 ---
 
 ---
