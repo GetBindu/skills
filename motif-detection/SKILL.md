@@ -1,3 +1,9 @@
+---
+name: motif-detection
+description: Extracts repeated melodic and rhythmic motifs from music corpus using sliding-window interval encoding
+metadata: {}
+---
+
 # motif-detection
 
 Extracts repeated melodic and rhythmic motifs from a music corpus using sliding-window interval encoding. Returns motifs with interval sequences, occurrence counts, and piece references.

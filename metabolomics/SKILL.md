@@ -1,8 +1,7 @@
 ---
 name: metabolomics
-description: ToolUniverse workflow — Metabolomics
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-metabolomics
-metadata:
+description: ToolUniverse workflow for metabolomics research and database integration
+metadata: {}
 ---
 
 ---

@@ -1,7 +1,7 @@
 ---
 name: materials
-description: Materials Project lookup and structure analysis (pymatgen, ASE)
-metadata:
+description: Materials Project lookup and structure analysis using pymatgen and ASE
+metadata: {}
 ---
 
 # Materials Science

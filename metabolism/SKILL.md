@@ -1,3 +1,9 @@
+---
+name: metabolism
+description: Continuous knowledge metabolism with daily research paper ingestion and synthesis
+metadata: {}
+---
+
 # Continuous Knowledge Metabolism - Summary
 
 This workflow automates a **daily research paper ingestion and synthesis cycle**. Here's the operational flow:
