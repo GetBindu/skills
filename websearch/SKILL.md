@@ -1,7 +1,9 @@
 ---
 name: websearch
 description: Search the web for scientific information using DuckDuckGo
+license: MIT
 metadata:
+    skill-author: K-Dense Inc.
 ---
 
 # Web Search
