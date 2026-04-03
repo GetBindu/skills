@@ -1,3 +1,11 @@
+---
+name: write-review-paper
+description: Literature review writing skill for structured academic papers and survey papers
+license: MIT
+metadata:
+    skill-author: K-Dense Inc.
+---
+
 # Literature Review Writing Skill Overview
 
 This Claude Code skill guides users through writing structured literature reviews and survey papers from pre-collected research materials.
