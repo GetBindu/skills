@@ -1,7 +1,7 @@
 ---
 name: nistwebbook
 description: Look up chemical data from NIST Chemistry WebBook (thermochemistry, spectra, properties)
-metadata:
+metadata: {}
 ---
 
 # NIST Chemistry WebBook
