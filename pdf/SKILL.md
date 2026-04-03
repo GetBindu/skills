@@ -1,7 +1,7 @@
 ---
 name: pdf
 description: Extract text, tables, and metadata from scientific PDF papers and reports
-metadata:
+metadata: {}
 ---
 
 ## Overview
