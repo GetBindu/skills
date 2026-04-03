@@ -1,8 +1,7 @@
 ---
 name: protein-therapeutic-design
 description: ToolUniverse workflow — Protein Therapeutic Design
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-protein-therapeutic-design
-metadata:
+metadata: {}
 ---
 
 ---
