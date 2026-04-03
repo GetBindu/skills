@@ -1,3 +1,9 @@
+---
+name: motif-clustering
+description: Clusters melodic motifs using scikit-learn with KMeans or hierarchical clustering and UMAP projection
+metadata: {}
+---
+
 # motif-clustering
 
 Clusters melodic motifs using scikit-learn (KMeans or hierarchical clustering) with optional UMAP projection. Takes motif JSON (from motif-detection) and groups them by interval similarity.
