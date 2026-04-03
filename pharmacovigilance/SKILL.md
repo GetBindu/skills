@@ -1,13 +1,7 @@
 ---
 name: pharmacovigilance
 description: ToolUniverse workflow — Pharmacovigilance
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-pharmacovigilance
-metadata:
----
-
----
-name: tooluniverse-pharmacovigilance
-description: Analyze drug safety signals from FDA adverse event reports, label warnings, and pharmacogenomic data. Calculates disproportionality measures (PRR, ROR), identifies serious adverse events, assesses pharmacogenomic risk variants. Use when asked about drug safety, adverse events, post-market surveillance, or risk-benefit assessment.
+metadata: {}
 ---
 
 # Pharmacovigilance Safety Analyzer
