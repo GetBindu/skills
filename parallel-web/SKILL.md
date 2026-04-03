@@ -1,3 +1,9 @@
+---
+name: parallel-web
+description: Web search and content extraction using Parallel Chat API and Extract API
+metadata: {}
+---
+
 # Parallel Web Systems API Skill Overview
 
 ## Core Purpose
