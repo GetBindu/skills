@@ -28,4 +28,14 @@ Templates guide users toward either survey paper format or thesis chapter struct
 The skill provides citation density guidelines (introduction: 10-20 citations; main survey: 50-100+ citations), transition phrases for connecting ideas, and common pitfalls like "列举式写作" (list-style writing that lacks analytical depth).
 
 ## Output Organization
-All materials go to `$W/review/` and include reading plans, annotated notes, comparison matrices, timelines, taxonomies, draft documents, and bibliography files.
+Use `scripts/generate_template.py --output-dir ./review --type all` to produce reading plans, comparison matrices, timelines, taxonomies, and writing outlines in a working directory.
+
+## Demo Script
+
+```bash
+cd {baseDir}
+python3 scripts/generate_template.py --type reading-plan --papers 20
+python3 scripts/generate_template.py --type all --topic "protein folding" --output-dir /tmp/review
+```
+
+The script is stdlib-only — no pip dependencies needed.
