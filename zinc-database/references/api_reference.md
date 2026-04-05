@@ -33,7 +33,7 @@ Retrieve compound information using ZINC identifiers.
 
 **URL Format**:
 ```
-https://cartblanche22.docking.org/substances.txt:zinc_id={ZINC_ID}&output_fields={FIELDS}
+https://cartblanche22.docking.org/substances.txt?zinc_id={ZINC_ID}&output_fields={FIELDS}
 ```
 
 **Examples**:
@@ -45,7 +45,7 @@ curl "https://cartblanche22.docking.org/[email protected]_fields=zinc_id,smiles,
 
 Multiple compounds:
 ```bash
-curl "https://cartblanche22.docking.org/substances.txt:zinc_id=ZINC000000000001,ZINC000000000002,ZINC000000000003&output_fields=zinc_id,smiles,tranche"
+curl "https://cartblanche22.docking.org/substances.txt?zinc_id=ZINC000000000001,ZINC000000000002,ZINC000000000003&output_fields=zinc_id,smiles,tranche"
 ```
 
 Batch retrieval from file:
@@ -76,31 +76,31 @@ Search for compounds by chemical structure with optional similarity thresholds.
 
 **URL Format**:
 ```
-https://cartblanche22.docking.org/smiles.txt:smiles={SMILES}&dist={DIST}&adist={ADIST}&output_fields={FIELDS}
+https://cartblanche22.docking.org/smiles.txt?smiles={SMILES}&dist={DIST}&adist={ADIST}&output_fields={FIELDS}
 ```
 
 **Examples**:
 
 Exact structure match:
 ```bash
-curl "https://cartblanche22.docking.org/smiles.txt:smiles=c1ccccc1&output_fields=zinc_id,smiles"
+curl "https://cartblanche22.docking.org/smiles.txt?smiles=c1ccccc1&output_fields=zinc_id,smiles"
 ```
 
 Similarity search (Tanimoto distance = 3):
 ```bash
-curl "https://cartblanche22.docking.org/smiles.txt:smiles=CC(C)Cc1ccc(cc1)C(C)C(=O)O&dist=3&output_fields=zinc_id,smiles,catalogs"
+curl "https://cartblanche22.docking.org/smiles.txt?smiles=CC(C)Cc1ccc(cc1)C(C)C(=O)O&dist=3&output_fields=zinc_id,smiles,catalogs"
 ```
 
 Broad similarity search:
 ```bash
-curl "https://cartblanche22.docking.org/smiles.txt:smiles=c1ccccc1&dist=5&adist=5&output_fields=zinc_id,smiles,tranche"
+curl "https://cartblanche22.docking.org/smiles.txt?smiles=c1ccccc1&dist=5&adist=5&output_fields=zinc_id,smiles,tranche"
 ```
 
 URL-encoded SMILES (for special characters):
 ```bash
 # Original: CC(=O)Oc1ccccc1C(=O)O
 # Encoded: CC%28%3DO%29Oc1ccccc1C%28%3DO%29O
-curl "https://cartblanche22.docking.org/smiles.txt:smiles=CC%28%3DO%29Oc1ccccc1C%28%3DO%29O&dist=2"
+curl "https://cartblanche22.docking.org/smiles.txt?smiles=CC%28%3DO%29Oc1ccccc1C%28%3DO%29O&dist=2"
 ```
 
 **Distance Parameters Interpretation**:
@@ -121,12 +121,12 @@ Query compounds by vendor catalog numbers.
 
 **URL Format**:
 ```
-https://cartblanche22.docking.org/catitems.txt:catitem_id={SUPPLIER_CODE}&output_fields={FIELDS}
+https://cartblanche22.docking.org/catitems.txt?catitem_id={SUPPLIER_CODE}&output_fields={FIELDS}
 ```
 
 **Example**:
 ```bash
-curl "https://cartblanche22.docking.org/catitems.txt:catitem_id=SUPPLIER-12345&output_fields=zinc_id,smiles,supplier_code,catalogs"
+curl "https://cartblanche22.docking.org/catitems.txt?catitem_id=SUPPLIER-12345&output_fields=zinc_id,smiles,supplier_code,catalogs"
 ```
 
 ### 4. Random Compound Sampling
@@ -142,7 +142,7 @@ Generate random compound sets with optional filtering by chemical properties.
 
 **URL Format**:
 ```
-https://cartblanche22.docking.org/substance/random.txt:count={COUNT}&subset={SUBSET}&output_fields={FIELDS}
+https://cartblanche22.docking.org/substance/random.txt?count={COUNT}&subset={SUBSET}&output_fields={FIELDS}
 ```
 
 **Examples**:
@@ -154,17 +154,17 @@ curl "https://cartblanche22.docking.org/substance/random.txt"
 
 Random lead-like molecules:
 ```bash
-curl "https://cartblanche22.docking.org/substance/random.txt:count=1000&subset=lead-like&output_fields=zinc_id,smiles,tranche"
+curl "https://cartblanche22.docking.org/substance/random.txt?count=1000&subset=lead-like&output_fields=zinc_id,smiles,tranche"
 ```
 
 Random drug-like molecules:
 ```bash
-curl "https://cartblanche22.docking.org/substance/random.txt:count=5000&subset=drug-like&output_fields=zinc_id,smiles"
+curl "https://cartblanche22.docking.org/substance/random.txt?count=5000&subset=drug-like&output_fields=zinc_id,smiles"
 ```
 
 Random fragments:
 ```bash
-curl "https://cartblanche22.docking.org/substance/random.txt:count=500&subset=fragment&output_fields=zinc_id,smiles,tranche"
+curl "https://cartblanche22.docking.org/substance/random.txt?count=500&subset=fragment&output_fields=zinc_id,smiles,tranche"
 ```
 
 **Subset Definitions**:
@@ -380,16 +380,16 @@ def advanced_zinc_search(smiles=None, zinc_ids=None, dist=0,
 
     # Structure search
     if smiles:
-        url = f"https://cartblanche22.docking.org/smiles.txt:smiles={smiles}&dist={dist}&output_fields={fields_str}"
+        url = f"https://cartblanche22.docking.org/smiles.txt?smiles={smiles}&dist={dist}&output_fields={fields_str}"
 
     # Batch retrieval
     elif zinc_ids:
         zinc_ids_str = ','.join(zinc_ids)
-        url = f"https://cartblanche22.docking.org/substances.txt:zinc_id={zinc_ids_str}&output_fields={fields_str}"
+        url = f"https://cartblanche22.docking.org/substances.txt?zinc_id={zinc_ids_str}&output_fields={fields_str}"
 
     # Random sampling
     elif count:
-        url = f"https://cartblanche22.docking.org/substance/random.txt:count={count}&output_fields={fields_str}"
+        url = f"https://cartblanche22.docking.org/substance/random.txt?count={count}&output_fields={fields_str}"
         if subset:
             url += f"&subset={subset}"
 

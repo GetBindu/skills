@@ -12,6 +12,35 @@ metadata:
 
 ZINC is a freely accessible repository of 230M+ purchasable compounds maintained by UCSF. Search by ZINC ID or SMILES, perform similarity searches, download 3D-ready structures for docking, discover analogs for virtual screening and drug discovery.
 
+## Recommended: Use the Python Script
+
+For all queries, prefer the included Python script over raw curl. It handles URL encoding, PubChem name resolution, and JSON output.
+
+**Setup (run once):**
+```bash
+cd {baseDir}
+python3 -m venv .venv && source .venv/bin/activate && pip install requests -q
+```
+
+**Queries (always activate venv first):**
+```bash
+cd {baseDir} && source .venv/bin/activate
+
+# Search by compound name (resolves via PubChem automatically)
+python3 scripts/query.py --query "aspirin" --format json
+
+# Search by ZINC ID
+python3 scripts/query.py --query "ZINC000000000001" --format json
+
+# Search by SMILES (similarity search)
+python3 scripts/query.py --query "c1ccccc1" --smiles --format json
+```
+
+**One-liner (setup + query in one command):**
+```bash
+cd {baseDir} && (test -d .venv || python3 -m venv .venv) && source .venv/bin/activate && pip install requests -q && python3 scripts/query.py --query "aspirin" --format json
+```
+
 ## When to Use This Skill
 
 This skill should be used when:
@@ -66,7 +95,7 @@ curl "https://cartblanche22.docking.org/[email protected]_fields=smiles,zinc_id"
 
 **Multiple IDs**:
 ```bash
-curl "https://cartblanche22.docking.org/substances.txt:zinc_id=ZINC000000000001,ZINC000000000002&output_fields=smiles,zinc_id,tranche"
+curl "https://cartblanche22.docking.org/substances.txt?zinc_id=ZINC000000000001,ZINC000000000002&output_fields=smiles,zinc_id,tranche"
 ```
 
 **Response fields**: `zinc_id`, `smiles`, `sub_id`, `supplier_code`, `catalogs`, `tranche` (includes H-count, LogP, MW, phase)
@@ -79,7 +108,7 @@ Find compounds by chemical structure using SMILES notation, with optional distan
 
 **API endpoint**:
 ```bash
-curl "https://cartblanche22.docking.org/[email protected]=4-Fadist=4"
+curl "https://cartblanche22.docking.org/smiles.txt?smiles=c1ccccc1&dist=4&output_fields=zinc_id,smiles,tranche"
 ```
 
 **Parameters**:
@@ -90,12 +119,12 @@ curl "https://cartblanche22.docking.org/[email protected]=4-Fadist=4"
 
 **Example - Exact match**:
 ```bash
-curl "https://cartblanche22.docking.org/smiles.txt:smiles=c1ccccc1"
+curl "https://cartblanche22.docking.org/smiles.txt?smiles=c1ccccc1"
 ```
 
 **Example - Similarity search**:
 ```bash
-curl "https://cartblanche22.docking.org/smiles.txt:smiles=c1ccccc1&dist=3&output_fields=zinc_id,smiles,tranche"
+curl "https://cartblanche22.docking.org/smiles.txt?smiles=c1ccccc1&dist=3&output_fields=zinc_id,smiles,tranche"
 ```
 
 ### 3. Search by Supplier Codes
@@ -106,7 +135,7 @@ Query compounds from specific chemical suppliers or retrieve all molecules from 
 
 **API endpoint**:
 ```bash
-curl "https://cartblanche22.docking.org/catitems.txt:catitem_id=SUPPLIER-CODE-123"
+curl "https://cartblanche22.docking.org/catitems.txt?catitem_id=SUPPLIER-CODE-123"
 ```
 
 **Use cases**:
@@ -122,7 +151,7 @@ Generate random compound sets for screening or benchmarking purposes.
 
 **API endpoint**:
 ```bash
-curl "https://cartblanche22.docking.org/substance/random.txt:count=100"
+curl "https://cartblanche22.docking.org/substance/random.txt?count=100"
 ```
 
 **Parameters**:
@@ -132,7 +161,7 @@ curl "https://cartblanche22.docking.org/substance/random.txt:count=100"
 
 **Example - Random lead-like molecules**:
 ```bash
-curl "https://cartblanche22.docking.org/substance/random.txt:count=1000&subset=lead-like&output_fields=zinc_id,smiles,tranche"
+curl "https://cartblanche22.docking.org/substance/random.txt?count=1000&subset=lead-like&output_fields=zinc_id,smiles,tranche"
 ```
 
 ## Common Workflows
@@ -144,7 +173,7 @@ curl "https://cartblanche22.docking.org/substance/random.txt:count=1000&subset=l
 2. **Query ZINC22** using appropriate search method:
    ```bash
    # Example: Get drug-like compounds with specific LogP and MW
-   curl "https://cartblanche22.docking.org/substance/random.txt:count=10000&subset=drug-like&output_fields=zinc_id,smiles,tranche" > docking_library.txt
+   curl "https://cartblanche22.docking.org/substance/random.txt?count=10000&subset=drug-like&output_fields=zinc_id,smiles,tranche" > docking_library.txt
    ```
 
 3. **Parse results** to extract ZINC IDs and SMILES:
@@ -170,7 +199,7 @@ curl "https://cartblanche22.docking.org/substance/random.txt:count=1000&subset=l
 
 2. **Perform similarity search** with distance threshold:
    ```bash
-   curl "https://cartblanche22.docking.org/smiles.txt:smiles=CC(C)Cc1ccc(cc1)C(C)C(=O)O&dist=5&output_fields=zinc_id,smiles,catalogs" > analogs.txt
+   curl "https://cartblanche22.docking.org/smiles.txt?smiles=CC(C)Cc1ccc(cc1)C(C)C(=O)O&dist=5&output_fields=zinc_id,smiles,catalogs" > analogs.txt
    ```
 
 3. **Analyze results** to identify purchasable analogs:
@@ -198,7 +227,7 @@ curl "https://cartblanche22.docking.org/substance/random.txt:count=1000&subset=l
 
 2. **Query ZINC22 API**:
    ```bash
-   curl "https://cartblanche22.docking.org/substances.txt:zinc_id=ZINC000000000001,ZINC000000000002&output_fields=zinc_id,smiles,supplier_code,catalogs"
+   curl "https://cartblanche22.docking.org/substances.txt?zinc_id=ZINC000000000001,ZINC000000000002&output_fields=zinc_id,smiles,supplier_code,catalogs"
    ```
 
 3. **Process results** for downstream analysis or purchasing
@@ -212,7 +241,7 @@ curl "https://cartblanche22.docking.org/substance/random.txt:count=1000&subset=l
 
 2. **Generate random sample**:
    ```bash
-   curl "https://cartblanche22.docking.org/substance/random.txt:count=5000&subset=lead-like&output_fields=zinc_id,smiles,tranche" > chemical_space_sample.txt
+   curl "https://cartblanche22.docking.org/substance/random.txt?count=5000&subset=lead-like&output_fields=zinc_id,smiles,tranche" > chemical_space_sample.txt
    ```
 
 3. **Analyze chemical diversity** and prepare for virtual screening
@@ -231,7 +260,7 @@ Customize API responses with the `output_fields` parameter:
 
 **Example**:
 ```bash
-curl "https://cartblanche22.docking.org/substances.txt:zinc_id=ZINC000000000001&output_fields=zinc_id,smiles,catalogs,tranche"
+curl "https://cartblanche22.docking.org/substances.txt?zinc_id=ZINC000000000001&output_fields=zinc_id,smiles,catalogs,tranche"
 ```
 
 ## Tranche System
@@ -282,13 +311,13 @@ def query_zinc_by_id(zinc_id, output_fields="zinc_id,smiles,catalogs"):
 
 def search_by_smiles(smiles, dist=0, adist=0, output_fields="zinc_id,smiles"):
     """Search ZINC22 by SMILES with optional distance parameters."""
-    url = f"https://cartblanche22.docking.org/smiles.txt:smiles={smiles}&dist={dist}&adist={adist}&output_fields={output_fields}"
+    url = f"https://cartblanche22.docking.org/smiles.txt?smiles={smiles}&dist={dist}&adist={adist}&output_fields={output_fields}"
     result = subprocess.run(['curl', url], capture_output=True, text=True)
     return result.stdout
 
 def get_random_compounds(count=100, subset=None, output_fields="zinc_id,smiles,tranche"):
     """Get random compounds from ZINC22."""
-    url = f"https://cartblanche22.docking.org/substance/random.txt:count={count}&output_fields={output_fields}"
+    url = f"https://cartblanche22.docking.org/substance/random.txt?count={count}&output_fields={output_fields}"
     if subset:
         url += f"&subset={subset}"
     result = subprocess.run(['curl', url], capture_output=True, text=True)
