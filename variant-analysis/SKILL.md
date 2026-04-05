@@ -1,9 +1,10 @@
 ---
 name: variant-analysis
-description: ToolUniverse workflow — Variant Analysis
+description: Production-ready VCF processing, variant annotation, and structural variant interpretation. Parses VCF files, classifies mutation types (missense/nonsense/frameshift/splice), applies VAF/depth filters, annotates with ClinVar/gnomAD/CADD, and interprets SV/CNV pathogenicity using ClinGen dosage sensitivity. Use for VCF analysis, variant filtering, mutation classification, and cohort comparison.
 license: MIT
 metadata:
     skill-author: K-Dense Inc.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-variant-analysis
 ---
 
 # Variant Analysis and Annotation
