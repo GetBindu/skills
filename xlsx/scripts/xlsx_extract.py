@@ -56,7 +56,7 @@ def extract_csv_pandas(file_path: str, head: int) -> dict:
     preview = df.head(head)
 
     # Convert to list of lists with header
-    rows = [list(preview.columns)] + preview.values.tolist()
+    rows = [list(preview.columns), *preview.values.tolist()]
     rows = [[str(cell) for cell in row] for row in rows]
 
     sheet_name = os.path.basename(file_path)
@@ -87,7 +87,7 @@ def extract_xlsx_pandas(file_path: str, sheet_name: str, head: int) -> dict:
             continue
         df = pd.read_excel(file_path, sheet_name=sname)
         preview = df.head(head)
-        rows = [list(preview.columns)] + preview.values.tolist()
+        rows = [list(preview.columns), *preview.values.tolist()]
         rows = [[str(cell) for cell in row] for row in rows]
         data[sname] = rows
         total_rows = max(total_rows, len(df))
@@ -103,9 +103,7 @@ def extract_xlsx_pandas(file_path: str, sheet_name: str, head: int) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Extract and preview data from Excel and CSV spreadsheet files"
-    )
+    parser = argparse.ArgumentParser(description="Extract and preview data from Excel and CSV spreadsheet files")
     parser.add_argument("--file", required=True, help="Path to .xlsx, .xls, or .csv file")
     parser.add_argument("--sheet", default=None, help="Sheet name to extract (default: all sheets)")
     parser.add_argument(
@@ -126,7 +124,8 @@ def main():
     try:
         if ext == ".csv":
             try:
-                import pandas as pd  # noqa: F401
+                import pandas as pd
+
                 result = extract_csv_pandas(args.file, args.head)
             except ImportError:
                 result = {
@@ -138,18 +137,17 @@ def main():
 
         elif ext in (".xlsx", ".xls"):
             try:
-                import openpyxl  # noqa: F401
+                import openpyxl
+
                 result = extract_xlsx_openpyxl(args.file, args.sheet, args.head)
             except ImportError:
                 try:
-                    import pandas as pd  # noqa: F401
+                    import pandas as pd
+
                     result = extract_xlsx_pandas(args.file, args.sheet, args.head)
                 except ImportError:
                     result = {
-                        "error": (
-                            "Neither openpyxl nor pandas installed. "
-                            "Run: pip install openpyxl pandas"
-                        ),
+                        "error": ("Neither openpyxl nor pandas installed. Run: pip install openpyxl pandas"),
                         "file": args.file,
                     }
                     print(json.dumps(result, indent=2))
