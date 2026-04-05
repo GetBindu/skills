@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Per-skill venvs created during testing
+.venv/
+*/.venv/
+*/**/.venv/
+
+# Auto-clones by bootstrapper skills (e.g. youtu-agent)
+*/upstream/
