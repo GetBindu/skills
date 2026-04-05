@@ -59,10 +59,9 @@ def _seed(query: str) -> int:
 
 
 DOMAIN_CLUSTERS = {
-    "scaling": ["parameter-scaling", "data-scaling", "compute-optimal",
-                "emergent", "over-trained"],
-    "gene":    ["pathogenic", "benign", "VUS", "splicing", "frameshift"],
-    "drug":    ["CNS-active", "peripheral", "high-clearance", "low-solubility", "approved"],
+    "scaling": ["parameter-scaling", "data-scaling", "compute-optimal", "emergent", "over-trained"],
+    "gene": ["pathogenic", "benign", "VUS", "splicing", "frameshift"],
+    "drug": ["CNS-active", "peripheral", "high-clearance", "low-solubility", "approved"],
     "polymer": ["biodegradable", "hydrophobic", "crosslinked", "amorphous", "crystalline"],
     "protein": ["alpha-helical", "beta-sheet", "disordered", "membrane", "soluble"],
 }
@@ -77,8 +76,7 @@ def _get_clusters(query: str) -> list[str]:
     return [f"cluster_{i}" for i in range(4)]
 
 
-def build_and_embed(query: str, n_samples: int = 120, n_dim: int = 12,
-                    upstream_vectors=None) -> dict:
+def build_and_embed(query: str, n_samples: int = 120, n_dim: int = 12, upstream_vectors=None) -> dict:
     rng = np.random.default_rng(_seed(query))
     data_source = "synthetic"
 
@@ -96,9 +94,7 @@ def build_and_embed(query: str, n_samples: int = 120, n_dim: int = 12,
         )
         embedding = reducer.fit_transform(X_scaled)
         points = [
-            {"x": round(float(embedding[i, 0]), 4),
-             "y": round(float(embedding[i, 1]), 4),
-             "label": point_labels[i]}
+            {"x": round(float(embedding[i, 0]), 4), "y": round(float(embedding[i, 1]), 4), "label": point_labels[i]}
             for i in range(len(X_raw))
         ]
         return {
@@ -140,17 +136,19 @@ def build_and_embed(query: str, n_samples: int = 120, n_dim: int = 12,
     # Compute cluster compactness in embedding space
     cluster_stats = []
     for k, label in enumerate(cluster_labels):
-        mask = (y == k)
+        mask = y == k
         pts = embedding[mask]
         centroid = pts.mean(axis=0)
-        spread = float(np.sqrt(((pts - centroid)**2).sum(axis=1)).mean())
-        cluster_stats.append({
-            "label": label,
-            "n_points": int(mask.sum()),
-            "centroid_x": round(float(centroid[0]), 4),
-            "centroid_y": round(float(centroid[1]), 4),
-            "spread": round(spread, 4),
-        })
+        spread = float(np.sqrt(((pts - centroid) ** 2).sum(axis=1)).mean())
+        cluster_stats.append(
+            {
+                "label": label,
+                "n_points": int(mask.sum()),
+                "centroid_x": round(float(centroid[0]), 4),
+                "centroid_y": round(float(centroid[1]), 4),
+                "spread": round(spread, 4),
+            }
+        )
 
     # Silhouette-like separation (between-cluster centroid distances)
     centroids = np.array([[s["centroid_x"], s["centroid_y"]] for s in cluster_stats])
@@ -164,9 +162,11 @@ def build_and_embed(query: str, n_samples: int = 120, n_dim: int = 12,
     # Sample up to 50 embedding points for JSON output
     sample_idx = rng.choice(len(X), min(50, len(X)), replace=False)
     points = [
-        {"x": round(float(embedding[i, 0]), 4),
-         "y": round(float(embedding[i, 1]), 4),
-         "cluster": cluster_labels[int(y[i])]}
+        {
+            "x": round(float(embedding[i, 0]), 4),
+            "y": round(float(embedding[i, 1]), 4),
+            "cluster": cluster_labels[int(y[i])],
+        }
         for i in sample_idx
     ]
 
@@ -187,14 +187,12 @@ def build_and_embed(query: str, n_samples: int = 120, n_dim: int = 12,
 
 def main():
     parser = argparse.ArgumentParser(description="UMAP dimensionality reduction")
-    parser.add_argument("--query", "-q", default="general topic",
-                        help="Research topic for embedding")
-    parser.add_argument("--format", "-f", default="summary",
-                        choices=["summary", "json"])
-    parser.add_argument("--describe-schema", action="store_true",
-                        help="Print expected --input-json schema as JSON and exit")
-    parser.add_argument("--input-json", default="",
-                        help="JSON with upstream data: {vectors: [[...]], labels: [...]}")
+    parser.add_argument("--query", "-q", default="general topic", help="Research topic for embedding")
+    parser.add_argument("--format", "-f", default="summary", choices=["summary", "json"])
+    parser.add_argument(
+        "--describe-schema", action="store_true", help="Print expected --input-json schema as JSON and exit"
+    )
+    parser.add_argument("--input-json", default="", help="JSON with upstream data: {vectors: [[...]], labels: [...]}")
     args = parser.parse_args()
 
     if args.describe_schema:
@@ -211,14 +209,14 @@ def main():
         print(f"UMAP — 2D Embedding: '{args.query[:50]}'")
         print("=" * 60)
         print(f"Samples     : {result.get('n_samples', '?')}  ({result.get('n_dimensions_input', '?')}D → 2D)")
-        n_clusters = result.get('n_clusters')
-        cluster_labels = result.get('cluster_labels', [])
+        n_clusters = result.get("n_clusters")
+        cluster_labels = result.get("cluster_labels", [])
         if n_clusters is not None:
             print(f"Clusters    : {n_clusters}  ({', '.join(cluster_labels)})")
-        avg_sep = result.get('avg_cluster_separation')
+        avg_sep = result.get("avg_cluster_separation")
         if avg_sep is not None:
             print(f"Avg cluster separation: {avg_sep}")
-        cluster_stats = result.get('cluster_stats', [])
+        cluster_stats = result.get("cluster_stats", [])
         if cluster_stats:
             print("Cluster stats:")
             for cs in cluster_stats:
