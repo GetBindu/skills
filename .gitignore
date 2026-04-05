@@ -10,3 +10,6 @@ __pycache__/
 
 # Auto-clones by bootstrapper skills (e.g. youtu-agent)
 */upstream/
+
+# Claude Code worktrees + local state
+.claude/
