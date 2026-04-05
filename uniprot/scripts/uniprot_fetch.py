@@ -9,7 +9,7 @@ Uses UniProt REST API.
 import argparse
 import json
 import sys
-from typing import List, Dict, Optional
+from typing import Dict, List, Optional
 
 try:
     import requests
@@ -22,10 +22,7 @@ UNIPROT_API = "https://rest.uniprot.org/uniprotkb"
 
 
 def search_uniprot(
-    query: str,
-    organism: Optional[str] = None,
-    reviewed: bool = False,
-    max_results: int = 10
+    query: str, organism: Optional[str] = None, reviewed: bool = False, max_results: int = 10
 ) -> List[Dict]:
     """
     Search UniProt for proteins.
@@ -63,7 +60,7 @@ def search_uniprot(
         "query": full_query,
         "format": "json",
         "size": max_results,
-        "fields": "accession,id,protein_name,gene_names,organism_name,length,reviewed"
+        "fields": "accession,id,protein_name,gene_names,organism_name,length,reviewed",
     }
 
     response = requests.get(f"{UNIPROT_API}/search", params=params)
@@ -78,11 +75,7 @@ def search_uniprot(
     return results
 
 
-def fetch_protein(
-    accession: str,
-    include_features: bool = False,
-    include_xrefs: bool = False
-) -> Dict:
+def fetch_protein(accession: str, include_features: bool = False, include_xrefs: bool = False) -> Dict:
     """
     Fetch a single protein entry.
 
@@ -96,12 +89,24 @@ def fetch_protein(
     """
     # Build fields to request
     fields = [
-        "accession", "id", "protein_name", "gene_names", "organism_name",
-        "organism_id", "length", "sequence", "reviewed",
-        "cc_function", "cc_subcellular_location", "cc_tissue_specificity",
-        "cc_disease", "cc_similarity",
-        "go_p", "go_c", "go_f",  # GO terms
-        "keyword"
+        "accession",
+        "id",
+        "protein_name",
+        "gene_names",
+        "organism_name",
+        "organism_id",
+        "length",
+        "sequence",
+        "reviewed",
+        "cc_function",
+        "cc_subcellular_location",
+        "cc_tissue_specificity",
+        "cc_disease",
+        "cc_similarity",
+        "go_p",
+        "go_c",
+        "go_f",  # GO terms
+        "keyword",
     ]
 
     if include_features:
@@ -110,10 +115,7 @@ def fetch_protein(
     if include_xrefs:
         fields.extend(["xref_pdb", "xref_pfam", "xref_interpro"])
 
-    params = {
-        "format": "json",
-        "fields": ",".join(fields)
-    }
+    params = {"format": "json", "fields": ",".join(fields)}
 
     response = requests.get(f"{UNIPROT_API}/{accession}", params=params)
 
@@ -184,11 +186,7 @@ def parse_gene_names(entry: Dict) -> List[str]:
 
 def parse_go_terms(entry: Dict) -> Dict[str, List[str]]:
     """Extract GO terms organized by category."""
-    go_terms = {
-        "biological_process": [],
-        "cellular_component": [],
-        "molecular_function": []
-    }
+    go_terms = {"biological_process": [], "cellular_component": [], "molecular_function": []}
 
     for comment in entry.get("uniProtKBCrossReferences", []):
         if comment.get("database") == "GO":
@@ -259,7 +257,11 @@ def format_detailed(entry: Dict) -> str:
     # Header
     accession = entry.get("primaryAccession", "")
     entry_id = entry.get("uniProtkbId", "")
-    reviewed = "Swiss-Prot (Reviewed)" if entry.get("entryType") == "UniProtKB reviewed (Swiss-Prot)" else "TrEMBL (Unreviewed)"
+    reviewed = (
+        "Swiss-Prot (Reviewed)"
+        if entry.get("entryType") == "UniProtKB reviewed (Swiss-Prot)"
+        else "TrEMBL (Unreviewed)"
+    )
 
     lines.append("=" * 80)
     lines.append(f"UniProt Entry: {accession}")
@@ -298,14 +300,14 @@ def format_detailed(entry: Dict) -> str:
     # Function
     functions = parse_comments(entry, "FUNCTION")
     if functions:
-        lines.append(f"\nFunction:")
+        lines.append("\nFunction:")
         for func in functions:
             lines.append(f"  {func}")
 
     # Subcellular location
     locations = parse_comments(entry, "SUBCELLULAR LOCATION")
     if locations:
-        lines.append(f"\nSubcellular Location:")
+        lines.append("\nSubcellular Location:")
         for loc in locations:
             lines.append(f"  {loc}")
 
@@ -335,7 +337,7 @@ def format_detailed(entry: Dict) -> str:
     # Disease associations
     diseases = parse_comments(entry, "DISEASE")
     if diseases:
-        lines.append(f"\nDisease Associations:")
+        lines.append("\nDisease Associations:")
         for disease in diseases[:3]:
             if len(disease) > 200:
                 disease = disease[:197] + "..."
@@ -352,10 +354,10 @@ def format_detailed(entry: Dict) -> str:
     # Sequence
     sequence = seq_info.get("value", "")
     if sequence:
-        lines.append(f"\nSequence:")
+        lines.append("\nSequence:")
         # Format sequence in blocks
         for i in range(0, len(sequence), 60):
-            lines.append(f"  {sequence[i:i+60]}")
+            lines.append(f"  {sequence[i : i + 60]}")
 
     return "\n".join(lines)
 
@@ -370,48 +372,23 @@ Examples:
   %(prog)s --search "insulin human" --reviewed
   %(prog)s --accession P04637 --format fasta
   %(prog)s --search "kinase" --organism human --max-results 20
-        """
+        """,
     )
 
+    parser.add_argument("--accession", "-a", help="UniProt accession or entry name (comma-separated for multiple)")
+    parser.add_argument("--search", "-s", help="Search query")
+    parser.add_argument("--organism", "-o", help="Filter by organism (name or taxonomy ID)")
+    parser.add_argument("--reviewed", "-r", action="store_true", help="Only Swiss-Prot (reviewed) entries")
+    parser.add_argument("--max-results", "-m", type=int, default=10, help="Maximum results for search (default: 10)")
     parser.add_argument(
-        "--accession", "-a",
-        help="UniProt accession or entry name (comma-separated for multiple)"
-    )
-    parser.add_argument(
-        "--search", "-s",
-        help="Search query"
-    )
-    parser.add_argument(
-        "--organism", "-o",
-        help="Filter by organism (name or taxonomy ID)"
-    )
-    parser.add_argument(
-        "--reviewed", "-r",
-        action="store_true",
-        help="Only Swiss-Prot (reviewed) entries"
-    )
-    parser.add_argument(
-        "--max-results", "-m",
-        type=int,
-        default=10,
-        help="Maximum results for search (default: 10)"
-    )
-    parser.add_argument(
-        "--format", "-f",
+        "--format",
+        "-f",
         default="summary",
         choices=["summary", "detailed", "fasta", "json"],
-        help="Output format (default: summary)"
+        help="Output format (default: summary)",
     )
-    parser.add_argument(
-        "--include-features",
-        action="store_true",
-        help="Include sequence features"
-    )
-    parser.add_argument(
-        "--include-xrefs",
-        action="store_true",
-        help="Include cross-references"
-    )
+    parser.add_argument("--include-features", action="store_true", help="Include sequence features")
+    parser.add_argument("--include-xrefs", action="store_true", help="Include cross-references")
 
     args = parser.parse_args()
 
@@ -422,10 +399,7 @@ Examples:
         if args.search:
             # Search mode
             results = search_uniprot(
-                query=args.search,
-                organism=args.organism,
-                reviewed=args.reviewed,
-                max_results=args.max_results
+                query=args.search, organism=args.organism, reviewed=args.reviewed, max_results=args.max_results
             )
 
             if args.format == "json":
@@ -459,7 +433,7 @@ Examples:
                 print(format_summary(entries))
 
     except Exception as e:
-        print(f"Error: {str(e)}", file=sys.stderr)
+        print(f"Error: {e!s}", file=sys.stderr)
         sys.exit(1)
 
 
