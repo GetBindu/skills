@@ -14,16 +14,40 @@ Zarr is a Python library for storing large N-dimensional arrays with chunking an
 
 ## Quick Start
 
-### Installation
+### Demo Script
+
+A working demo is included at `scripts/demo.py` — creates, writes, reads, and slices a chunked Zarr array.
+
+**Setup (run once):**
+```bash
+cd {baseDir}
+python3 -m venv .venv && source .venv/bin/activate && pip install zarr numpy -q
+```
+
+**Run demo:**
+```bash
+cd {baseDir} && source .venv/bin/activate
+python3 scripts/demo.py                              # default 1000x1000 array
+python3 scripts/demo.py --shape 500 500 500 --chunks 50 50 50    # 3D
+python3 scripts/demo.py --format json                # JSON output
+python3 scripts/demo.py --store /tmp/my.zarr         # persist to disk
+```
+
+**One-liner (setup + demo):**
+```bash
+cd {baseDir} && (test -d .venv || python3 -m venv .venv) && source .venv/bin/activate && pip install zarr numpy -q && python3 scripts/demo.py
+```
+
+### Installation (for your own code)
 
 ```bash
 uv pip install zarr
 ```
 
 Requires Python 3.11+. For cloud storage support, install additional packages:
-```python
-uv pip install s3fs  # For S3
-uv pip install gcsfs  # For Google Cloud Storage
+```bash
+uv pip install s3fs    # For S3
+uv pip install gcsfs   # For Google Cloud Storage
 ```
 
 ### Basic Array Creation
