@@ -1,37 +1,4 @@
----
-name: youtu_agent
-description: Flexible, high-performance framework for building, running, and evaluating autonomous agents with automated generation, experience learning, and RL training capabilities.
-source_type: github
-auth_required: true
-repository_url: "https://github.com/TencentCloudADP/youtu-agent"
-reference_url: "https://arxiv.org/abs/2512.24615"
----
-
-## youtu_agent
-
-Flexible, high-performance framework for building, running, and evaluating autonomous agents with automated generation, experience learning, and RL training capabilities.
-
-### Code repository
-
-<https://github.com/TencentCloudADP/youtu-agent>
-
-**Use this as the implementation source:** clone the repo and follow its README for install, dependencies, and how to run code or experiments. The generated client prints JSON with a suggested ``git clone`` command.
-
-### Paper (arXiv — explanation)
-
-<https://arxiv.org/abs/2512.24615>
-
-This is the **paper** reference. The client can optionally fetch live Atom metadata (title, abstract) for agents; it does **not** run training or upstream research code by itself.
-
-### What “running” this client does
-
-The `*_client.py` script prints **JSON** that combines a **GitHub repository** (clone URL + suggested ``git clone``) with **optional paper context** from arXiv (live Atom metadata when **reference_url** is arXiv). Run the real code by cloning the repo and following its README — the skill is your agent-facing entrypoint, not a substitute for the repo’s install steps.
-
-To call a **REST API** instead, set ``BASE_URL`` in `scripts/youtu_agent_client.py` or wrap the upstream CLI with ``subprocess`` after clone.
-
-### How to run the method (from the source)
-
-Extracted for **operators and agents**. Confirm against the upstream repository or paper before relying on it in production.
+# Usage: youtu_agent
 
 ## Prerequisites
 
@@ -164,25 +131,6 @@ python examples/svg_generator/main_web.py
 # Access at http://127.0.0.1:8848/
 ```
 
-*The same text lives in* ``scripts/USAGE.md`` *for tools that prefer reading files under* ``scripts/``*.*
+---
 
-### Parameters
-
-  --api-key  (str)  [required]  API key for authentication
-  --config  (str)  [required]  Path or name of the agent configuration file (YAML). Examples: 'simple/base_search', 'simple/base', 'ww'
-  --exp-id  (str)  [optional, default=None]  Experiment identifier for evaluation runs
-  --dataset  (str)  [optional, default=None]  Dataset name for evaluation. Examples: 'WebWalkerQA_15', 'GAIA'
-  --concurrency  (int)  [optional, default=5]  Number of concurrent evaluation tasks
-  --config-name  (str)  [optional, default=None]  Configuration name for evaluation (e.g., 'ww' for WebWalkerQA)
-
-### Usage
-
-```bash
-python3 scripts/youtu_agent_client.py --config simple/base_search
-```
-
-### Example Output
-
-```json
-{"response": "agent_output", "trajectory": [...]}
-```
+**Scientia client:** `python3 scripts/youtu_agent_client.py` with the flags in `SKILL.md` — prints JSON on stdout for agents.
