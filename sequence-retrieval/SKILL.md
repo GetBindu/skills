@@ -1,14 +1,10 @@
 ---
 name: sequence-retrieval
-description: ToolUniverse workflow — Sequence Retrieval
+description: Retrieve biological sequences (DNA, RNA, protein) from NCBI and ENA via ToolUniverse — gene disambiguation, accession type handling, comprehensive sequence profiles with metadata, cross-database references, and download options. Use for nucleotide sequences, protein sequences, genome data, or GenBank/RefSeq/EMBL accessions.
 license: MIT license
 metadata:
     skill-author: K-Dense Inc.
----
-
----
-name: tooluniverse-sequence-retrieval
-description: Retrieves biological sequences (DNA, RNA, protein) from NCBI and ENA with gene disambiguation, accession type handling, and comprehensive sequence profiles. Creates detailed reports with sequence metadata, cross-database references, and download options. Use when users need nucleotide sequences, protein sequences, genome data, or mention GenBank, RefSeq, EMBL accessions.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-sequence-retrieval
 ---
 
 # Biological Sequence Retrieval
