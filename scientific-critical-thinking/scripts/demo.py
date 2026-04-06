@@ -20,17 +20,14 @@ def demonstrate():
         "skill": "scientific-critical-thinking",
         "status": "available",
         "description": "Critical thinking for science",
-        "note": "See SKILL.md and references/ for comprehensive documentation"
+        "note": "See SKILL.md and references/ for comprehensive documentation",
     }
 
 
 def main():
-    parser = argparse.ArgumentParser(description='scientific-critical-thinking demonstration')
+    parser = argparse.ArgumentParser(description="scientific-critical-thinking demonstration")
     parser.add_argument(
-        '--format', '-f',
-        default='summary',
-        choices=['summary', 'json'],
-        help='Output format (default: summary)'
+        "--format", "-f", default="summary", choices=["summary", "json"], help="Output format (default: summary)"
     )
 
     args = parser.parse_args()
@@ -38,7 +35,7 @@ def main():
     try:
         result = demonstrate()
 
-        if args.format == 'json':
+        if args.format == "json":
             print(json.dumps(result, indent=2))
         else:
             print("=" * 70)
@@ -49,9 +46,9 @@ def main():
             print("=" * 70)
 
     except Exception as e:
-        print(f"Error: {str(e)}", file=sys.stderr)
+        print(f"Error: {e!s}", file=sys.stderr)
         sys.exit(1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
