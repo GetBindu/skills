@@ -102,23 +102,17 @@ def generate(query: str, mode: str = "outline") -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='scientific-writing demonstration')
+    parser = argparse.ArgumentParser(description="scientific-writing demonstration")
+    parser.add_argument("--query", "-q", default="", help="Topic/prompt for the writing scaffold")
     parser.add_argument(
-        '--query', '-q',
-        default="",
-        help='Topic/prompt for the writing scaffold'
+        "--mode",
+        "-m",
+        default="outline",
+        choices=["outline", "hypothesis", "synthesis"],
+        help="Which scaffold to generate (default: outline)",
     )
     parser.add_argument(
-        '--mode', '-m',
-        default='outline',
-        choices=['outline', 'hypothesis', 'synthesis'],
-        help='Which scaffold to generate (default: outline)'
-    )
-    parser.add_argument(
-        '--format', '-f',
-        default='summary',
-        choices=['summary', 'json'],
-        help='Output format (default: summary)'
+        "--format", "-f", default="summary", choices=["summary", "json"], help="Output format (default: summary)"
     )
 
     args = parser.parse_args()
@@ -126,7 +120,7 @@ def main():
     try:
         result = generate(query=args.query, mode=args.mode)
 
-        if args.format == 'json':
+        if args.format == "json":
             print(json.dumps(result, indent=2))
         else:
             print("=" * 70)
@@ -144,5 +138,5 @@ def main():
         sys.exit(0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
