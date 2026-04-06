@@ -6,8 +6,9 @@ This template provides a starting point for building SimPy simulations.
 Customize the process functions and parameters for your specific use case.
 """
 
-import simpy
 import random
+
+import simpy
 
 
 class SimulationConfig:
@@ -97,10 +98,7 @@ def customer_process(env, name, resource, stats, config):
         print(f"{name} started service at {service_start:.2f} (waited {wait_time:.2f})")
 
         # Service time (normally distributed)
-        service_time = max(0.1, random.gauss(
-            config.service_time_mean,
-            config.service_time_std
-        ))
+        service_time = max(0.1, random.gauss(config.service_time_mean, config.service_time_std))
         stats.record_service_time(service_time)
 
         yield env.timeout(service_time)
