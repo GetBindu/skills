@@ -1,14 +1,10 @@
 ---
 name: single-cell
-description: ToolUniverse workflow — Single Cell
+description: Production-ready scRNA-seq analysis via ToolUniverse — QC, normalization, PCA, UMAP, Leiden clustering, differential expression, cell type annotation, batch correction (Harmony), trajectory inference, and cell-cell communication (CellPhoneDB/CellChatDB via OmniPath). Use for single-cell datasets, expression matrix analysis, tumor-immune communication, and ligand-receptor interaction scoring.
 license: MIT license
 metadata:
     skill-author: K-Dense Inc.
----
-
----
-name: tooluniverse-single-cell
-description: Production-ready single-cell and expression matrix analysis using scanpy, anndata, and scipy. Performs scRNA-seq QC, normalization, PCA, UMAP, Leiden/Louvain clustering, differential expression (Wilcoxon, t-test, DESeq2), cell type annotation, per-cell-type statistical analysis, gene-expression correlation, batch correction (Harmony), trajectory inference, and cell-cell communication analysis. NEW: Analyzes ligand-receptor interactions between cell types using OmniPath (CellPhoneDB, CellChatDB), scores communication strength, identifies signaling cascades, and handles multi-subunit receptor complexes. Integrates with ToolUniverse gene annotation tools (HPA, Ensembl, MyGene, UniProt) and enrichment tools (gseapy, PANTHER, STRING). Supports h5ad, 10X, CSV/TSV count matrices, and pre-annotated datasets. Use when analyzing single-cell RNA-seq data, studying cell-cell interactions, performing cell type differential expression, computing gene-expression correlations by cell type, analyzing tumor-immune communication, or answering questions about scRNA-seq datasets.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-single-cell
 ---
 
 # Single-Cell Genomics and Expression Matrix Analysis
