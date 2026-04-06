@@ -21,7 +21,7 @@ import argparse
 import hashlib
 import json
 import sys
-from typing import Optional, Tuple, List
+from typing import List, Optional, Tuple
 
 import numpy as np
 
@@ -105,7 +105,7 @@ def run_regression(query: str, rows: Optional[List[dict]] = None) -> dict:
         "topic": query,
         "model": "LinearRegression",
         "data_source": data_source,
-        "n_observations": int(len(y)),
+        "n_observations": len(y),
         "x_label": x_label,
         "y_label": y_label,
         "coefficients": {"intercept": round(intercept, 6), "slope": round(slope, 6)},
