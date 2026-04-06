@@ -21,14 +21,16 @@ import numpy as np
 
 try:
     import shap
+
     _SHAP_AVAILABLE = True
 except ImportError:
     _SHAP_AVAILABLE = False
 
 try:
     from sklearn.ensemble import GradientBoostingRegressor
-    from sklearn.model_selection import train_test_split
     from sklearn.inspection import permutation_importance
+    from sklearn.model_selection import train_test_split
+
     _SKLEARN_AVAILABLE = True
 except ImportError:
     _SKLEARN_AVAILABLE = False
@@ -57,7 +59,7 @@ def _load_upstream_tabular(input_json: str):
             return None
         target_col = data.get("target", None)
         # Auto-detect target: last numeric column or one named loss/y/target
-        all_keys = [k for k in rows[0].keys() if isinstance(rows[0][k], (int, float))]
+        all_keys = [k for k in rows[0] if isinstance(rows[0][k], (int, float))]
         if target_col is None or target_col not in all_keys:
             for candidate in ("loss", "y", "target", "label"):
                 if candidate in all_keys:
@@ -82,23 +84,34 @@ def _seed(query: str) -> int:
 # Domain-specific feature definitions
 DOMAIN_FEATURES = {
     "scaling": {
-        "features": ["log_params", "log_tokens", "log_flops", "architecture_depth",
-                     "learning_rate", "batch_size", "data_quality"],
+        "features": [
+            "log_params",
+            "log_tokens",
+            "log_flops",
+            "architecture_depth",
+            "learning_rate",
+            "batch_size",
+            "data_quality",
+        ],
         "target": "test_loss",
     },
     "drug": {
-        "features": ["molecular_weight", "logP", "hbd", "hba", "rotatable_bonds",
-                     "aromatic_rings", "tpsa"],
+        "features": ["molecular_weight", "logP", "hbd", "hba", "rotatable_bonds", "aromatic_rings", "tpsa"],
         "target": "bioavailability",
     },
     "gene": {
-        "features": ["expression_level", "variant_severity", "conservation_score",
-                     "domain_disruption", "pathway_centrality", "tissue_specificity"],
+        "features": [
+            "expression_level",
+            "variant_severity",
+            "conservation_score",
+            "domain_disruption",
+            "pathway_centrality",
+            "tissue_specificity",
+        ],
         "target": "disease_association",
     },
     "polymer": {
-        "features": ["molecular_weight", "crystallinity", "hydrophilicity",
-                     "degradation_rate", "tensile_strength"],
+        "features": ["molecular_weight", "crystallinity", "hydrophilicity", "degradation_rate", "tensile_strength"],
         "target": "biodegradability",
     },
 }
@@ -111,7 +124,7 @@ def _get_feature_config(query: str) -> dict:
             return cfg
     # Generic
     n = min(6, max(3, len(query.split()) // 2))
-    feats = [f"feature_{i+1}" for i in range(n)]
+    feats = [f"feature_{i + 1}" for i in range(n)]
     return {"features": feats, "target": "outcome"}
 
 
@@ -143,11 +156,9 @@ def run_shap(query: str, upstream_tabular=None) -> dict:
     if len(X) < 10:
         X_train, X_test, y_train, y_test = X, X, y, y
     else:
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=_seed(query) % (2**31))
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=_seed(query) % (2**31))
 
-    model = GradientBoostingRegressor(n_estimators=80, max_depth=3,
-                                      random_state=_seed(query) % (2**31))
+    model = GradientBoostingRegressor(n_estimators=80, max_depth=3, random_state=_seed(query) % (2**31))
     model.fit(X_train, y_train)
     r2 = model.score(X_test, y_test)
 
@@ -166,8 +177,7 @@ def run_shap(query: str, upstream_tabular=None) -> dict:
         }
     else:
         # Fallback: use permutation importance
-        perm = permutation_importance(model, X_test, y_test, n_repeats=10,
-                                       random_state=_seed(query) % (2**31))
+        perm = permutation_importance(model, X_test, y_test, n_repeats=10, random_state=_seed(query) % (2**31))
         raw = np.abs(perm.importances_mean)
         total = raw.sum() if raw.sum() > 0 else 1.0
         importance_pct = (raw / total * 100).round(2).tolist()
@@ -179,10 +189,7 @@ def run_shap(query: str, upstream_tabular=None) -> dict:
             for name, v, pct in zip(feature_names, raw.tolist(), importance_pct)
         }
 
-    ranked = sorted(
-        zip(feature_names, importance_pct),
-        key=lambda x: -x[1]
-    )
+    ranked = sorted(zip(feature_names, importance_pct), key=lambda x: -x[1])
 
     return {
         "topic": query,
@@ -191,27 +198,22 @@ def run_shap(query: str, upstream_tabular=None) -> dict:
         "n_train": len(y_train),
         "n_test": len(y_test),
         "data_source": data_source,
-        "feature_importance": {
-            name: pct for name, pct in ranked
-        },
-        "top_features": [
-            {"feature": name, "importance_pct": pct}
-            for name, pct in ranked[:5]
-        ],
+        "feature_importance": {name: pct for name, pct in ranked},
+        "top_features": [{"feature": name, "importance_pct": pct} for name, pct in ranked[:5]],
         "shap_summary": shap_summary,
     }
 
 
 def main():
     parser = argparse.ArgumentParser(description="SHAP feature importance analysis")
-    parser.add_argument("--query", "-q", default="general model",
-                        help="Research topic to analyse")
-    parser.add_argument("--format", "-f", default="summary",
-                        choices=["summary", "json"])
-    parser.add_argument("--describe-schema", action="store_true",
-                        help="Print expected --input-json schema as JSON and exit")
-    parser.add_argument("--input-json", default="",
-                        help="JSON with upstream data: {rows: [{feature_cols..., target}], target: str}")
+    parser.add_argument("--query", "-q", default="general model", help="Research topic to analyse")
+    parser.add_argument("--format", "-f", default="summary", choices=["summary", "json"])
+    parser.add_argument(
+        "--describe-schema", action="store_true", help="Print expected --input-json schema as JSON and exit"
+    )
+    parser.add_argument(
+        "--input-json", default="", help="JSON with upstream data: {rows: [{feature_cols..., target}], target: str}"
+    )
     args = parser.parse_args()
 
     if args.describe_schema:
