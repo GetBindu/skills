@@ -2,35 +2,21 @@
 """
 ToolUniverse workflow: tooluniverse-spatial-omics-analysis
 
-Calls the ToolUniverse AgenticTool for this workflow and returns JSON output.
-Requires: pip install tooluniverse
+CLI wrapper for the spatial multi-omics analysis agentic workflow.
+See: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-spatial-omics-analysis
 
 Usage:
-    python3 run.py --query "Your research question or input"
-    python3 run.py --query "Alzheimer disease" --format summary
+    python3 run.py --query "Analyze SVGs from 10x Visium breast cancer spatial transcriptomics"
+    python3 run.py --list-workflows
 """
 
 import argparse
 import json
 import sys
 
-
 WORKFLOW = "tooluniverse-spatial-omics-analysis"
-
-
-def build_parser():
-    parser = argparse.ArgumentParser(
-        description="Run the ToolUniverse '" + WORKFLOW + "' research workflow.",
-    )
-    parser.add_argument("--query", "-q", required=True, help="Research query or input")
-    parser.add_argument(
-        "--format", "-f", choices=["json", "summary"], default="json",
-        help="Output format",
-    )
-    parser.add_argument(
-        "--no-cache", action="store_true", help="Disable result caching",
-    )
-    return parser
+UPSTREAM_REPO = "https://github.com/mims-harvard/ToolUniverse"
+UPSTREAM_SKILL = f"{UPSTREAM_REPO}/tree/main/skills/{WORKFLOW}"
 
 
 def to_serializable(obj):
@@ -45,35 +31,89 @@ def to_serializable(obj):
         return str(obj)
 
 
-def main():
-    parser = build_parser()
-    args = parser.parse_args()
-
+def load_tooluniverse():
     try:
         from tooluniverse import ToolUniverse
     except ImportError:
-        print("Error: tooluniverse is not installed. Run: pip install tooluniverse", file=sys.stderr)
-        sys.exit(1)
-
+        return None, {
+            "error": "tooluniverse is not installed",
+            "install": "pip install tooluniverse pyyaml",
+            "upstream": UPSTREAM_REPO,
+        }
     tu = ToolUniverse()
     tu.load_tools()
+    return tu, None
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description=f"Run the ToolUniverse '{WORKFLOW}' spatial omics analysis workflow.",
+    )
+    parser.add_argument("--query", "-q", help="Research question or analysis task")
+    parser.add_argument("--format", "-f", choices=["json", "summary"], default="json", help="Output format")
+    parser.add_argument("--no-cache", action="store_true", help="Disable result caching")
+    parser.add_argument("--list-workflows", action="store_true", help="List available workflows and exit")
+    args = parser.parse_args()
+
+    tu, err = load_tooluniverse()
+    if err:
+        print(json.dumps(err, indent=2), file=sys.stderr)
+        sys.exit(1)
+
+    available = list(tu.all_tool_dict.keys())
+
+    if args.list_workflows:
+        print(
+            json.dumps(
+                {
+                    "total_tools_loaded": len(available),
+                    "upstream_repo": UPSTREAM_REPO,
+                    "target_workflow": WORKFLOW,
+                    "target_workflow_available": WORKFLOW in available,
+                    "sample_tools": sorted(available)[:20],
+                },
+                indent=2,
+            )
+        )
+        return
+
+    if not args.query:
+        parser.error("--query is required (or use --list-workflows)")
+
+    if WORKFLOW not in available:
+        print(
+            json.dumps(
+                {
+                    "error": f"Workflow '{WORKFLOW}' not available in current tooluniverse install",
+                    "reason": "The pip-published tooluniverse package bundles data-source tool clients but not the agentic skill workflows.",
+                    "upstream_skill_definition": UPSTREAM_SKILL,
+                    "workaround": "Clone the upstream repo and load skills from skills/ directory.",
+                    "tools_loaded": len(available),
+                    "query": args.query,
+                },
+                indent=2,
+            )
+        )
+        sys.exit(2)
 
     try:
-        result = tu.run(
-            {"name": WORKFLOW, "arguments": {"query": args.query}},
-            use_cache=not args.no_cache,
-        )
+        run_kwargs = {}
+        try:
+            import inspect
+
+            if "use_cache" in inspect.signature(tu.run).parameters:
+                run_kwargs["use_cache"] = not args.no_cache
+        except Exception:
+            pass
+        result = tu.run({"name": WORKFLOW, "arguments": {"query": args.query}}, **run_kwargs)
     except Exception as exc:
-        error = {"error": str(exc), "workflow": WORKFLOW, "query": args.query}
-        print(json.dumps(error, indent=2))
+        print(json.dumps({"error": str(exc), "workflow": WORKFLOW, "query": args.query}, indent=2))
         sys.exit(1)
 
     safe = to_serializable(result)
     if args.format == "summary":
-        if isinstance(safe, str):
-            print(safe[:3000])
-        else:
-            print(json.dumps(safe, indent=2)[:3000])
+        text = safe if isinstance(safe, str) else json.dumps(safe, indent=2)
+        print(text[:3000])
     else:
         print(json.dumps(safe, indent=2))
 
