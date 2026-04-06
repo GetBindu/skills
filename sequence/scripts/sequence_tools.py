@@ -16,14 +16,14 @@ import json
 import os
 import re
 import sys
-from typing import List, Dict, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 try:
     from Bio import SeqIO
+    from Bio.Data import CodonTable
     from Bio.Seq import Seq
     from Bio.SeqUtils import gc_fraction, molecular_weight
     from Bio.SeqUtils.ProtParam import ProteinAnalysis
-    from Bio.Data import CodonTable
 except ImportError:
     print("Error: Biopython is required. Install with: pip install biopython")
     sys.exit(1)
@@ -40,14 +40,14 @@ def read_sequence(input_str: str) -> Tuple[str, str]:
         # Try to parse as sequence file
         for fmt in ["fasta", "genbank", "embl"]:
             try:
-                with open(input_str, 'r') as f:
+                with open(input_str) as f:
                     for record in SeqIO.parse(f, fmt):
                         return str(record.seq), record.id
             except Exception:
                 continue
 
         # Read as plain text
-        with open(input_str, 'r') as f:
+        with open(input_str) as f:
             seq = f.read().strip()
             # Remove FASTA header if present
             if seq.startswith(">"):
@@ -81,11 +81,7 @@ def detect_sequence_type(sequence: str) -> str:
 
 
 def translate_sequence(
-    sequence: str,
-    table: int = 1,
-    frame: int = 1,
-    all_frames: bool = False,
-    to_stop: bool = False
+    sequence: str, table: int = 1, frame: int = 1, all_frames: bool = False, to_stop: bool = False
 ) -> Dict:
     """
     Translate DNA/RNA to protein.
@@ -125,7 +121,7 @@ def translate_sequence(
             frame_seq = rev_seq[start:]
 
         # Trim to multiple of 3
-        frame_seq = frame_seq[:len(frame_seq) - (len(frame_seq) % 3)]
+        frame_seq = frame_seq[: len(frame_seq) - (len(frame_seq) % 3)]
 
         try:
             if to_stop:
@@ -138,7 +134,7 @@ def translate_sequence(
                 "protein": str(protein),
                 "length": len(protein),
                 "start": start + 1,
-                "dna_length": len(frame_seq)
+                "dna_length": len(frame_seq),
             }
         except Exception as e:
             frame_name = f"frame_{f}" if f > 0 else f"frame_neg{abs(f)}"
@@ -162,10 +158,7 @@ def compute_stats(sequence: str, seq_type: str = "auto") -> Dict:
         seq_type = detect_sequence_type(sequence)
 
     seq_upper = sequence.upper()
-    stats = {
-        "type": seq_type,
-        "length": len(sequence)
-    }
+    stats = {"type": seq_type, "length": len(sequence)}
 
     if seq_type in ["dna", "rna"]:
         # Nucleotide statistics
@@ -216,8 +209,7 @@ def compute_stats(sequence: str, seq_type: str = "auto") -> Dict:
 
             # Amino acid percentages
             aa_percent = analysis.get_amino_acids_percent()
-            stats["composition_percent"] = {aa: round(pct * 100, 1)
-                                            for aa, pct in aa_percent.items() if pct > 0.01}
+            stats["composition_percent"] = {aa: round(pct * 100, 1) for aa, pct in aa_percent.items() if pct > 0.01}
 
         except Exception as e:
             stats["error"] = str(e)
@@ -231,11 +223,7 @@ def reverse_complement(sequence: str) -> str:
     return str(seq.reverse_complement())
 
 
-def parse_file(
-    filepath: str,
-    file_format: str = "auto",
-    output_format: str = "summary"
-) -> List[Dict]:
+def parse_file(filepath: str, file_format: str = "auto", output_format: str = "summary") -> List[Dict]:
     """
     Parse sequence file.
 
@@ -257,7 +245,7 @@ def parse_file(
             ".gb": "genbank",
             ".gbk": "genbank",
             ".genbank": "genbank",
-            ".embl": "embl"
+            ".embl": "embl",
         }
         file_format = format_map.get(ext, "fasta")
 
@@ -269,24 +257,26 @@ def parse_file(
             "name": record.name,
             "description": record.description,
             "length": len(record.seq),
-            "sequence": str(record.seq)
+            "sequence": str(record.seq),
         }
 
         # Add annotations if available
         if record.annotations:
-            rec_data["annotations"] = {k: str(v) for k, v in record.annotations.items()
-                                       if isinstance(v, (str, int, float))}
+            rec_data["annotations"] = {
+                k: str(v) for k, v in record.annotations.items() if isinstance(v, (str, int, float))
+            }
 
         # Add features for GenBank
         if file_format == "genbank" and record.features:
             features = []
             for feat in record.features[:20]:  # Limit features
-                features.append({
-                    "type": feat.type,
-                    "location": str(feat.location),
-                    "qualifiers": {k: v[0] if len(v) == 1 else v
-                                   for k, v in feat.qualifiers.items()}
-                })
+                features.append(
+                    {
+                        "type": feat.type,
+                        "location": str(feat.location),
+                        "qualifiers": {k: v[0] if len(v) == 1 else v for k, v in feat.qualifiers.items()},
+                    }
+                )
             rec_data["features"] = features
 
         records.append(rec_data)
@@ -294,11 +284,7 @@ def parse_file(
     return records
 
 
-def find_orfs(
-    sequence: str,
-    min_length: int = 30,
-    table: int = 1
-) -> List[Dict]:
+def find_orfs(sequence: str, min_length: int = 30, table: int = 1) -> List[Dict]:
     """
     Find Open Reading Frames.
 
@@ -323,16 +309,16 @@ def find_orfs(
         for frame in range(3):
             # Extract codons
             for i in range(frame, len(nuc_seq) - 2, 3):
-                codon = str(nuc_seq[i:i+3])
+                codon = str(nuc_seq[i : i + 3])
 
                 if codon in start_codons:
                     # Found start, look for stop
                     for j in range(i + 3, len(nuc_seq) - 2, 3):
-                        stop_codon = str(nuc_seq[j:j+3])
+                        stop_codon = str(nuc_seq[j : j + 3])
                         if stop_codon in stop_codons:
                             orf_len = (j - i) // 3
                             if orf_len >= min_length:
-                                orf_seq = nuc_seq[i:j+3]
+                                orf_seq = nuc_seq[i : j + 3]
                                 protein = orf_seq.translate(table=table, to_stop=True)
 
                                 if strand == "+":
@@ -342,16 +328,18 @@ def find_orfs(
                                     start_pos = len(seq) - j - 2
                                     end_pos = len(seq) - i
 
-                                orfs.append({
-                                    "strand": strand,
-                                    "frame": frame + 1,
-                                    "start": start_pos,
-                                    "end": end_pos,
-                                    "length_codons": orf_len,
-                                    "length_nt": len(orf_seq),
-                                    "sequence": str(orf_seq),
-                                    "protein": str(protein)
-                                })
+                                orfs.append(
+                                    {
+                                        "strand": strand,
+                                        "frame": frame + 1,
+                                        "start": start_pos,
+                                        "end": end_pos,
+                                        "length_codons": orf_len,
+                                        "length_nt": len(orf_seq),
+                                        "sequence": str(orf_seq),
+                                        "protein": str(protein),
+                                    }
+                                )
                             break
 
     # Sort by length
@@ -383,7 +371,7 @@ def search_motif(sequence: str, pattern: str) -> List[Dict]:
         "D": "[AGT]",
         "H": "[ACT]",
         "V": "[ACG]",
-        "N": "[ACGT]"
+        "N": "[ACGT]",
     }
 
     regex_pattern = pattern.upper()
@@ -394,11 +382,7 @@ def search_motif(sequence: str, pattern: str) -> List[Dict]:
     seq_upper = sequence.upper()
 
     for match in re.finditer(regex_pattern, seq_upper):
-        matches.append({
-            "start": match.start() + 1,
-            "end": match.end(),
-            "sequence": match.group()
-        })
+        matches.append({"start": match.start() + 1, "end": match.end(), "sequence": match.group()})
 
     return matches
 
@@ -416,11 +400,11 @@ def format_translation_output(results: Dict) -> str:
         else:
             lines.append(f"  DNA length: {data['dna_length']} bp")
             lines.append(f"  Protein length: {data['length']} aa")
-            lines.append(f"  Protein sequence:")
+            lines.append("  Protein sequence:")
 
-            protein = data['protein']
+            protein = data["protein"]
             for i in range(0, len(protein), 60):
-                lines.append(f"    {protein[i:i+60]}")
+                lines.append(f"    {protein[i : i + 60]}")
 
     return "\n".join(lines)
 
@@ -433,32 +417,32 @@ def format_stats_output(stats: Dict) -> str:
     lines.append(f"Length: {stats['length']}")
     lines.append("")
 
-    if stats['type'] in ['dna', 'rna']:
+    if stats["type"] in ["dna", "rna"]:
         lines.append(f"GC Content: {stats['gc_content']}%")
-        if 'at_gc_ratio' in stats:
+        if "at_gc_ratio" in stats:
             lines.append(f"AT/GC Ratio: {stats['at_gc_ratio']}")
-        if 'molecular_weight' in stats:
+        if "molecular_weight" in stats:
             lines.append(f"Molecular Weight: {stats['molecular_weight']:,.2f} Da")
 
         lines.append("\nBase Composition:")
-        for base, count in sorted(stats['composition'].items()):
-            pct = (count / stats['length']) * 100
+        for base, count in sorted(stats["composition"].items()):
+            pct = (count / stats["length"]) * 100
             lines.append(f"  {base}: {count} ({pct:.1f}%)")
 
     else:
-        if 'molecular_weight' in stats:
+        if "molecular_weight" in stats:
             lines.append(f"Molecular Weight: {stats['molecular_weight']:,.2f} Da")
-        if 'isoelectric_point' in stats:
+        if "isoelectric_point" in stats:
             lines.append(f"Isoelectric Point (pI): {stats['isoelectric_point']}")
-        if 'instability_index' in stats:
-            stable = "stable" if stats['instability_index'] < 40 else "unstable"
+        if "instability_index" in stats:
+            stable = "stable" if stats["instability_index"] < 40 else "unstable"
             lines.append(f"Instability Index: {stats['instability_index']} ({stable})")
-        if 'gravy' in stats:
+        if "gravy" in stats:
             lines.append(f"GRAVY (hydrophobicity): {stats['gravy']}")
 
-        if 'composition_percent' in stats:
+        if "composition_percent" in stats:
             lines.append("\nAmino Acid Composition (>1%):")
-            for aa, pct in sorted(stats['composition_percent'].items(), key=lambda x: -x[1]):
+            for aa, pct in sorted(stats["composition_percent"].items(), key=lambda x: -x[1]):
                 lines.append(f"  {aa}: {pct}%")
 
     return "\n".join(lines)
@@ -480,9 +464,9 @@ def format_orfs_output(orfs: List[Dict]) -> str:
         lines.append(f"  Length: {orf['length_codons']} codons ({orf['length_nt']} nt)")
         lines.append(f"  Protein ({len(orf['protein'])} aa):")
 
-        protein = orf['protein']
+        protein = orf["protein"]
         for j in range(0, min(len(protein), 120), 60):
-            lines.append(f"    {protein[j:j+60]}")
+            lines.append(f"    {protein[j : j + 60]}")
         if len(protein) > 120:
             lines.append(f"    ... ({len(protein) - 120} more residues)")
 
@@ -511,8 +495,7 @@ def format_motif_output(matches: List[Dict], pattern: str) -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Sequence analysis tools",
-        formatter_class=argparse.RawDescriptionHelpFormatter
+        description="Sequence analysis tools", formatter_class=argparse.RawDescriptionHelpFormatter
     )
 
     subparsers = parser.add_subparsers(dest="command", help="Command to run")
@@ -566,11 +549,7 @@ def main():
         if args.command == "translate":
             seq, _ = read_sequence(args.sequence)
             results = translate_sequence(
-                seq,
-                table=args.table,
-                frame=args.frame,
-                all_frames=args.all_frames,
-                to_stop=args.to_stop
+                seq, table=args.table, frame=args.frame, all_frames=args.all_frames, to_stop=args.to_stop
             )
             if args.json:
                 print(json.dumps(results, indent=2))
@@ -599,9 +578,9 @@ def main():
             elif args.output == "fasta":
                 for rec in records:
                     print(f">{rec['id']} {rec['description']}")
-                    seq = rec['sequence']
+                    seq = rec["sequence"]
                     for i in range(0, len(seq), 60):
-                        print(seq[i:i+60])
+                        print(seq[i : i + 60])
             else:
                 print(f"Parsed {len(records)} sequences:\n")
                 for rec in records[:20]:
@@ -631,7 +610,7 @@ def main():
                 print(format_motif_output(matches, args.pattern))
 
     except Exception as e:
-        print(f"Error: {str(e)}", file=sys.stderr)
+        print(f"Error: {e!s}", file=sys.stderr)
         sys.exit(1)
 
 
