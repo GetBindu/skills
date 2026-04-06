@@ -1,14 +1,10 @@
 ---
 name: spatial-transcriptomics
-description: ToolUniverse workflow — Spatial Transcriptomics
+description: Spatial transcriptomics analysis via ToolUniverse — gene expression mapping in tissue architecture for 10x Visium, MERFISH, seqFISH, Slide-seq, and imaging-based platforms. Performs spatial clustering, domain identification, cell-cell proximity analysis, spatially variable gene detection, tissue architecture mapping, and integration with single-cell data. Use for spatial expression patterns, tumor microenvironment spatial structure, or tissue organization studies.
 license: MIT license
 metadata:
     skill-author: K-Dense Inc.
----
-
----
-name: tooluniverse-spatial-transcriptomics
-description: Analyze spatial transcriptomics data to map gene expression in tissue architecture. Supports 10x Visium, MERFISH, seqFISH, Slide-seq, and imaging-based platforms. Performs spatial clustering, domain identification, cell-cell proximity analysis, spatial gene expression patterns, tissue architecture mapping, and integration with single-cell data. Use when analyzing spatial transcriptomics datasets, studying tissue organization, identifying spatial expression patterns, mapping cell-cell interactions in tissue context, characterizing tumor microenvironment spatial structure, or integrating spatial and single-cell RNA-seq data for comprehensive tissue analysis.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-spatial-transcriptomics
 ---
 
 # Spatial Transcriptomics Analysis
