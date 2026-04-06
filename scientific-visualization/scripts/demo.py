@@ -24,6 +24,7 @@ import numpy as np
 
 try:
     import matplotlib
+
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 except ImportError as e:
@@ -31,7 +32,6 @@ except ImportError as e:
     sys.exit(1)
 
 from figure_export import save_publication_figure
-
 
 INPUT_SCHEMA = {
     "input_json_fields": ["data"],
@@ -120,4 +120,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
