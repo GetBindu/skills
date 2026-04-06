@@ -50,16 +50,18 @@ def search_scholar(
 
     papers = []
     for p in result.papers:
-        papers.append({
-            "title": p.title,
-            "authors": p.authors,
-            "venue": p.venue,
-            "year": p.year,
-            "snippet": p.snippet,
-            "citations": p.citations,
-            "url": p.url,
-            "pdf_url": p.pdf_url,
-        })
+        papers.append(
+            {
+                "title": p.title,
+                "authors": p.authors,
+                "venue": p.venue,
+                "year": p.year,
+                "snippet": p.snippet,
+                "citations": p.citations,
+                "url": p.url,
+                "pdf_url": p.pdf_url,
+            }
+        )
 
     # Sort by citations if requested
     if sort_by == "citations":
@@ -121,28 +123,26 @@ Examples:
   %(prog)s --query "lithium extraction brine"
   %(prog)s --query "rare earth separation" --year-from 2020 --sort-by citations
   %(prog)s --query "critical minerals policy" --format json
-        """
+        """,
     )
 
     parser.add_argument("--query", "-q", required=True, help="Search query")
     parser.add_argument("--year-from", type=int, help="Start year filter")
     parser.add_argument("--year-to", type=int, help="End year filter")
+    parser.add_argument("--num-results", "-n", type=int, default=10, help="Number of results (max 20, default: 10)")
     parser.add_argument(
-        "--num-results", "-n",
-        type=int, default=10,
-        help="Number of results (max 20, default: 10)"
-    )
-    parser.add_argument(
-        "--sort-by", "-s",
+        "--sort-by",
+        "-s",
         default="relevance",
         choices=["relevance", "citations"],
-        help="Sort order (default: relevance)"
+        help="Sort order (default: relevance)",
     )
     parser.add_argument(
-        "--format", "-f",
+        "--format",
+        "-f",
         default="summary",
         choices=["summary", "detailed", "json"],
-        help="Output format (default: summary)"
+        help="Output format (default: summary)",
     )
 
     args = parser.parse_args()

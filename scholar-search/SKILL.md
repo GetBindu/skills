@@ -1,14 +1,10 @@
 ---
 name: scholar-search
-description: Search Google Scholar via SerpAPI for academic papers on critical minerals with citation counts and metadata
+description: Search Google Scholar via SerpAPI for academic papers with citation counts, authors, venues, and links. Useful for literature surveys on critical minerals, supply chains, extraction methods, and materials science. Requires SERPAPI_KEY.
+license: MIT license
 metadata:
-  openclaw:
-    emoji: "🎓"
-    requires:
-      bins:
-        - python3
-      env:
-        - SERPAPI_KEY
+    skill-author: K-Dense Inc.
+    requires-env: SERPAPI_KEY
 ---
 
 # Google Scholar Search
