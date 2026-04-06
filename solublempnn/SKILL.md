@@ -1,9 +1,10 @@
 ---
 name: solublempnn
-description: SolubleMPNN solubility-optimized sequence design
+description: Solubility-optimized protein sequence design using SolubleMPNN (ProteinMPNN variant from LigandMPNN). Generates sequences with higher aqueous solubility for E. coli and cell-free expression. Includes post-design filtering (GRAVY, instability index, liability scanning) and multi-chain complex support. Use for reducing inclusion bodies, improving expression yields, or designing soluble binders.
 license: MIT license
 metadata:
     skill-author: K-Dense Inc.
+    source: https://github.com/dauparas/LigandMPNN
 ---
 
 # SolubleMPNN Solubility-Optimized Sequence Design
