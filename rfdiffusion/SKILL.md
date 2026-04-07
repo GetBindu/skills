@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # RFdiffusion Backbone Generation
 
 Diffusion-based de novo protein backbone generation. Use for: binder scaffolds targeting specific hotspot residues, novel fold generation, motif scaffolding, and symmetric oligomer design.
