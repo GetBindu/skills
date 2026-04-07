@@ -4,7 +4,6 @@ description: Generate investigation-specific figures from the local artifact gra
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Investigation Plotter
 
 Creates a compact, *investigation-specific* figure set from `~/.scienceclaw/artifacts/**/store.jsonl` for a given
