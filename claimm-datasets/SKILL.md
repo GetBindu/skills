@@ -10,7 +10,6 @@ metadata:
       env:
         - EDX_API_KEY
 ---
-
 # CLAIMM Dataset Search
 
 Search and discover datasets from NETL's Energy Data Exchange (EDX) CLAIMM collection. Provides access to 200+ US-focused critical minerals datasets including geological surveys, geochemical analyses, deposit locations, and resource assessments.
