@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # TDC – Binding Effect Prediction
 
 Predict **binding-related effects** for small molecules using pre-trained models from [Therapeutics Data Commons (TDC)](https://huggingface.co/tdc/models) on Hugging Face. Uses SMILES as input and returns classification or scores.
