@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Literature Survey Workflow Summary
 
 This document describes **research-collect**, a CLI skill for conducting systematic literature surveys. Here are the key components:
