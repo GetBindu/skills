@@ -3,7 +3,6 @@ name: arxiv
 description: Search ArXiv for scientific preprints in biology, chemistry, and related fields
 metadata:
 ---
-
 # ArXiv Search
 
 Search ArXiv for scientific preprints. Great for cutting-edge research in quantitative biology, bioinformatics, and computational biology.
