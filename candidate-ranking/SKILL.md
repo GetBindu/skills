@@ -4,7 +4,6 @@ description: Rank peptide variants using stability heuristics and hotspot protec
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Candidate Ranking
 
 Ranks candidates based on a simple weighted score:
