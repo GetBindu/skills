@@ -3,7 +3,6 @@ name: pharmacovigilance
 description: ToolUniverse workflow — Pharmacovigilance
 metadata: {}
 ---
-
 # Pharmacovigilance Safety Analyzer
 
 Systematic drug safety analysis using FAERS adverse event data, FDA labeling, PharmGKB pharmacogenomics, and clinical trial safety signals.
