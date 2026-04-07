@@ -6,7 +6,6 @@ license: MIT License
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Clinical Decision Support Documents
 
 ## Description
