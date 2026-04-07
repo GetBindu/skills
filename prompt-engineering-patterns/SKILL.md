@@ -3,7 +3,6 @@ name: prompt-engineering-patterns
 description: Generate optimized LLM prompts using chain-of-thought, ReAct, and other scientific reasoning patterns
 metadata: {}
 ---
-
 ## Overview
 
 Advanced LLM prompt optimization patterns for scientific reasoning: chain-of-thought, tree-of-thought, few-shot learning, ReAct, and self-consistency. Generates optimized prompts tailored to scientific investigation tasks and specific domains (biology, chemistry, materials, etc.).
