@@ -5,7 +5,6 @@ license: https://github.com/pydicom/pydicom/blob/main/LICENSE
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Pydicom
 
 ## Overview
