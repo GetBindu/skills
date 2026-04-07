@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Research Pipeline Skill Overview
 
 This is an **orchestrator skill** that manages a complete ML research workflow without performing the actual research tasks itself.
