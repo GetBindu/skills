@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Commodity Profile Generator
 
 Generate comprehensive commodity profiles by orchestrating calls to multiple mineral-claw skills. Profiles cover production data (BGS), trade flows (Comtrade), supply chain risk metrics, recent research, export restriction policies, and web intelligence from news/blog/government sources.
