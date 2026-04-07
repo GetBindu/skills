@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Minerals Data — Structured CSV Querying
 
 Query and analyze structured CSV datasets from the critical minerals corpus. Supports listing available datasets, describing schemas, filtering, grouping, and aggregation via pandas.
