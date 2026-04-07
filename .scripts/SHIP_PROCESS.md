@@ -4,13 +4,13 @@
 
 ---
 
-## The 8 Steps
+## The 9 Steps
 
 For **each** skill, execute these steps in order. Don't skip ahead, don't batch.
 
 ```
-1. Select  →  2. Inspect  →  3. Fix  →  4. Smoke test  →  5. Agno test  →  6. README  →  7. Ship  →  8. Slack
-                                         ↑ must pass        ↑ must pass                ↑ only if 4+5 pass
+1. Select → 2. Inspect → 3. Fix → 4. Smoke test → 5. Agno test → 6. README → 7. Ship → 8. Slack → 9. API push
+                                      ↑ must pass     ↑ must pass              ↑ only if 4+5 pass    ↑ auto via GA
 ```
 
 ### Step 1 — Select the next skill
@@ -192,6 +192,29 @@ python3 scripts/<main>.py --<flag> "<value>"
 <2-3 line excerpt from Step 5 showing the agent successfully used the skill>
 
 *README:* <skill-name>/README.md
+```
+
+### Step 9 — API push (portal registration)
+
+Happens automatically via GitHub Actions on push to `main` (`.github/workflows/publish.yml`).
+
+The GA:
+1. Detects which skill directories changed in the commit
+2. Runs `.scripts/publish_skill.py <skill>` for each changed skill
+3. POSTs metadata to the portal API (name, slug, description, category, tags, env vars, deps)
+
+**Requires GitHub secrets:**
+- `SKILLS_API_URL` → portal endpoint (e.g., `https://imagine.getbindu.com/api/skills`)
+- `SKILLS_API_KEY` → API auth key
+
+**Manual push (for backfill or local testing):**
+```bash
+python3 .scripts/publish_skill.py <skill-name> \
+  --api-url "http://localhost:3000/api/skills" \
+  --api-key "YOUR_KEY"
+
+# Dry-run (extract metadata, don't POST):
+python3 .scripts/publish_skill.py <skill-name> --dry-run
 ```
 
 ---

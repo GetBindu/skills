@@ -4,7 +4,7 @@ Scientific skills for Agno and Claude agents. ~340 skills covering bioinformatic
 
 ## Active work: Skill shipping SOP
 
-We are shipping skills one at a time using an 8-step SOP. Each skill gets: inspected → fixed → smoke tested → Agno agent tested → README written → committed/pushed → Slack notified.
+We are shipping skills one at a time using a 9-step SOP. Each skill gets: inspected → fixed → smoke tested → Agno agent tested → README written → committed/pushed → Slack notified → API pushed (auto via GA).
 
 **To resume**: Read `.claude/RESUME.md` for full context — shipped log, pending queue, credentials, templates, and patterns.
 
