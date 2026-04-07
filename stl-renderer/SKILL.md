@@ -5,7 +5,6 @@ metadata:
   category: visualisation
   requires: numpy, matplotlib, mpl_toolkits
 ---
-
 # STL Renderer
 
 Produces three views of any binary STL mesh:
