@@ -5,7 +5,6 @@ license: https://github.com/sympy/sympy/blob/master/LICENSE
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # SymPy - Symbolic Mathematics in Python
 
 ## Overview
