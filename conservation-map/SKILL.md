@@ -4,7 +4,6 @@ description: Compute per-position conservation/entropy for an aligned peptide MS
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Conservation Map
 
 Compute conservation for each alignment column from an MSA.
