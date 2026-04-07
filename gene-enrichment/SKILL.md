@@ -1,13 +1,8 @@
 ---
 name: gene-enrichment
 description: ToolUniverse workflow — Gene Enrichment
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gene-enrichment
 metadata:
----
-
----
-name: tooluniverse-gene-enrichment
-description: Perform comprehensive gene enrichment and pathway analysis using gseapy (ORA and GSEA), PANTHER, STRING, Reactome, and 40+ ToolUniverse tools. Supports GO enrichment (BP, MF, CC), KEGG, Reactome, WikiPathways, MSigDB Hallmark, and 220+ Enrichr libraries. Handles multiple ID types (gene symbols, Ensembl, Entrez, UniProt), multiple organisms (human, mouse, rat, fly, worm, yeast), customizable backgrounds, and multiple testing correction (BH, Bonferroni). Use when users ask about gene enrichment, pathway analysis, GO term enrichment, KEGG pathway analysis, GSEA, over-representation analysis, functional annotation, or gene set analysis.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gene-enrichment
 ---
 
 # Gene Enrichment and Pathway Analysis
