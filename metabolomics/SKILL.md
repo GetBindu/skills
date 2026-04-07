@@ -1,13 +1,8 @@
 ---
 name: metabolomics
 description: ToolUniverse workflow — Metabolomics
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-metabolomics
 metadata:
----
-
----
-name: tooluniverse-metabolomics
-description: Comprehensive metabolomics research skill for identifying metabolites, analyzing studies, and searching metabolomics databases. Integrates HMDB (220k+ metabolites), MetaboLights, Metabolomics Workbench, and PubChem. Use when asked to identify or annotate metabolites (HMDB IDs, chemical properties, pathways), retrieve metabolomics study information from MetaboLights (MTBLS*) or Metabolomics Workbench (ST*), search for studies by keywords or disease, or generate comprehensive metabolomics research reports.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-metabolomics
 ---
 
 # Metabolomics Research
