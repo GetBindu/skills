@@ -5,7 +5,6 @@ license: Unknown
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # PubMed Search
 
 Search the PubMed database for scientific literature, retrieve abstracts, and format citations.
