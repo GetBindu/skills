@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 ## symtorch
 
 Approximate deep learning model components with symbolic equations using PySR
