@@ -1,13 +1,8 @@
 ---
 name: network-pharmacology
 description: ToolUniverse workflow — Network Pharmacology
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-network-pharmacology
 metadata:
----
-
----
-name: tooluniverse-network-pharmacology
-description: Construct and analyze compound-target-disease networks for drug repurposing, polypharmacology discovery, and systems pharmacology. Builds multi-layer networks from ChEMBL, OpenTargets, STRING, DrugBank, Reactome, FAERS, and 60+ other ToolUniverse tools. Calculates Network Pharmacology Scores (0-100), identifies repurposing candidates, predicts mechanisms, and analyzes polypharmacology. Use when users ask about drug repurposing via network analysis, multi-target drug effects, compound-target-disease networks, systems pharmacology, or polypharmacology.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-network-pharmacology
 ---
 
 # Network Pharmacology Pipeline
