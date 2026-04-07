@@ -1,13 +1,8 @@
 ---
 name: binder-discovery
 description: ToolUniverse workflow — Binder Discovery
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-binder-discovery
 metadata:
----
-
----
-name: tooluniverse-binder-discovery
-description: Discover novel small molecule binders for protein targets using structure-based and ligand-based approaches. Creates actionable reports with candidate compounds, ADMET profiles, and synthesis feasibility. Use when users ask to find small molecules for a target, identify novel binders, perform virtual screening, or need hit-to-lead compound identification.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-binder-discovery
 ---
 
 # Small Molecule Binder Discovery Strategy
