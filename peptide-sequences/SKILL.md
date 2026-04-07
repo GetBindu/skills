@@ -4,7 +4,6 @@ description: Generate a curated peptide sequence set for a target (e.g., somatos
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Peptide Sequences
 
 Seed a peptide-sequence artifact with a small, curated set of therapeutically relevant peptide scaffolds.
