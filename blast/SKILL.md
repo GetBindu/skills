@@ -3,7 +3,6 @@ name: blast
 description: Search NCBI BLAST for sequence homology and find similar sequences in biological databases
 metadata:
 ---
-
 # BLAST Search
 
 Run NCBI BLAST (Basic Local Alignment Search Tool) searches to find sequence homology against NCBI databases.
