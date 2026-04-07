@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Supply Chain Risk Analysis
 
 Compute supply chain risk metrics for critical minerals including the Herfindahl-Hirschman Index (HHI) for production concentration, net import reliance (NIR), top-3 country share, and multi-year trend analysis. Combines data from BGS World Mineral Statistics and USGS Mineral Commodity Summaries.
