@@ -5,7 +5,6 @@ metadata:
   category: materials-design
   requires: numpy, matplotlib, mpl_toolkits
 ---
-
 # Point Cloud Generator
 
 Generates a 3D point cloud for a **Hierarchical Ribbed Membrane Lattice** inspired by
