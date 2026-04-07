@@ -1,13 +1,8 @@
 ---
 name: drug-repurposing
 description: ToolUniverse workflow — Drug Repurposing
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-drug-repurposing
 metadata:
----
-
----
-name: tooluniverse-drug-repurposing
-description: Identify drug repurposing candidates using ToolUniverse for target-based, compound-based, and disease-driven strategies. Searches existing drugs for new therapeutic indications by analyzing targets, bioactivity, safety profiles, and literature evidence. Use when exploring drug repurposing opportunities, finding new indications for approved drugs, or when users mention drug repositioning, off-label uses, or therapeutic alternatives.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-drug-repurposing
 ---
 
 # Drug Repurposing with ToolUniverse
