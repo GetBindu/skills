@@ -5,7 +5,6 @@ metadata:
   category: materials-design
   requires: numpy, scipy, core/llm_client
 ---
-
 # Geometry Generator
 
 Generates parametric bioinspired hierarchical ribbed membrane STL geometry.
