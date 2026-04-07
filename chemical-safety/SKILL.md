@@ -1,13 +1,8 @@
 ---
 name: chemical-safety
 description: ToolUniverse workflow — Chemical Safety
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-chemical-safety
 metadata:
----
-
----
-name: tooluniverse-chemical-safety
-description: Comprehensive chemical safety and toxicology assessment integrating ADMET-AI predictions, CTD toxicogenomics, FDA label safety data, DrugBank safety profiles, and STITCH chemical-protein interactions. Performs predictive toxicology (AMES, DILI, LD50, carcinogenicity), organ/system toxicity profiling, chemical-gene-disease relationship mapping, regulatory safety extraction, and environmental hazard assessment. Use when asked about chemical toxicity, drug safety profiling, ADMET properties, environmental health risks, chemical hazard assessment, or toxicogenomic analysis.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-chemical-safety
 ---
 
 # Chemical Safety & Toxicology Assessment
