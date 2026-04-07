@@ -1,13 +1,8 @@
 ---
 name: disease-research
 description: ToolUniverse workflow — Disease Research
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-disease-research
 metadata:
----
-
----
-name: tooluniverse-disease-research
-description: Generate comprehensive disease research reports using 100+ ToolUniverse tools. Creates a detailed markdown report file and progressively updates it with findings from 10 research dimensions. All information includes source references. Use when users ask about diseases, syndromes, or need systematic disease analysis.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-disease-research
 ---
 
 # ToolUniverse Disease Research
