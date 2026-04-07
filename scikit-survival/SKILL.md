@@ -5,7 +5,6 @@ license: GPL-3.0 license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # scikit-survival: Survival Analysis in Python
 
 ## Overview
