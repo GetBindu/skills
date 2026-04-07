@@ -1,13 +1,8 @@
 ---
 name: metabolomics-analysis
 description: ToolUniverse workflow — Metabolomics Analysis
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-metabolomics-analysis
 metadata:
----
-
----
-name: tooluniverse-metabolomics-analysis
-description: Analyze metabolomics data including metabolite identification, quantification, pathway analysis, and metabolic flux. Processes LC-MS, GC-MS, NMR data from targeted and untargeted experiments. Performs normalization, statistical analysis, pathway enrichment, metabolite-enzyme integration, and biomarker discovery. Use when analyzing metabolomics datasets, identifying differential metabolites, studying metabolic pathways, integrating with transcriptomics/proteomics, discovering metabolic biomarkers, performing flux balance analysis, or characterizing metabolic phenotypes in disease, drug response, or physiological conditions.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-metabolomics-analysis
 ---
 
 # Metabolomics Analysis
