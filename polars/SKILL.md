@@ -5,7 +5,6 @@ license: https://github.com/pola-rs/polars/blob/main/LICENSE
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Polars
 
 ## Overview
