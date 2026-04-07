@@ -3,7 +3,6 @@ name: materials
 description: Materials Project lookup and structure analysis (pymatgen, ASE)
 metadata:
 ---
-
 # Materials Science
 
 Look up materials from the [Materials Project](https://materialsproject.org/) and run basic structure analysis. Uses pymatgen and optionally ASE.
