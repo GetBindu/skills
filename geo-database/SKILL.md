@@ -5,7 +5,6 @@ license: Unknown
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # GEO Database
 
 ## Overview
