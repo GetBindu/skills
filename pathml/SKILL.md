@@ -5,7 +5,6 @@ license: GPL-2.0 license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # PathML
 
 ## Overview
