@@ -3,7 +3,6 @@ name: chembl
 description: "Small-molecule drug lookup by exact drug name or ChEMBL ID. Query MUST be a single drug name or ID — 1 to 3 words maximum. Valid examples: 'sotorasib', 'imatinib', 'ibrutinib', 'CHEMBL25', 'AMG 510'. If the topic is 'sotorasib KRAS G12C', the correct query is 'sotorasib'. If the topic is 'BTK inhibitors in CLL', search PubMed first to get a specific drug name, then query ChEMBL with that name. Strip protein names, mutation labels, and mechanism words — pass only the compound name."
 metadata:
 ---
-
 # ChEMBL Drug and Compound Lookup
 
 Query the ChEMBL database for drug-like molecules, drug targets, and bioactivity data. ChEMBL is EBI's open database of drug discovery and medicinal chemistry.
