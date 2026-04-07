@@ -1,13 +1,8 @@
 ---
 name: chemical-compound-retrieval
 description: ToolUniverse workflow — Chemical Compound Retrieval
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-chemical-compound-retrieval
 metadata:
----
-
----
-name: tooluniverse-chemical-compound-retrieval
-description: Retrieves chemical compound information from PubChem and ChEMBL with disambiguation, cross-referencing, and quality assessment. Creates comprehensive compound profiles with identifiers, properties, bioactivity, and drug information. Use when users need chemical data, drug information, or mention PubChem CID, ChEMBL ID, SMILES, InChI, or compound names.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-chemical-compound-retrieval
 ---
 
 # Chemical Compound Information Retrieval
