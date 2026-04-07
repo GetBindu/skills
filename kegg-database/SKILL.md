@@ -5,7 +5,6 @@ license: Non-academic use of KEGG requires a commercial license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # KEGG Database
 
 ## Overview
