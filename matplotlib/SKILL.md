@@ -5,7 +5,6 @@ license: https://github.com/matplotlib/matplotlib/tree/main/LICENSE
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Matplotlib
 
 ## Overview
