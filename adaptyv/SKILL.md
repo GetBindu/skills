@@ -5,7 +5,6 @@ license: Unknown
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Adaptyv
 
 Adaptyv is a cloud laboratory platform for automated protein testing and validation. You must have a registered lab account to use the platform. Submit protein sequences via API or web interface, and receive experimental results in approximately 21 days.
