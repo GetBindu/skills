@@ -3,7 +3,6 @@ name: cas
 description: Look up chemicals in CAS Common Chemistry (name, CAS RN, SMILES, InChI; ~500k compounds)
 metadata:
 ---
-
 # CAS Common Chemistry
 
 Query [CAS Common Chemistry](https://commonchemistry.cas.org/) for compound names, CAS Registry Numbers®, molecular formula, mass, SMILES, InChI, and experimental properties. Covers nearly 500,000 compounds (CC BY-NC 4.0).
