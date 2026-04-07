@@ -5,7 +5,6 @@ license: BSD-3-Clause license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Statsmodels: Statistical Modeling and Econometrics
 
 ## Overview
