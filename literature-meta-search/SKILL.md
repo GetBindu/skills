@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Literature Meta-Search
 
 Unified literature search across multiple sources — OSTI, Google Scholar, ArXiv, and the local PDF corpus — with deduplication and reciprocal rank fusion ranking. Returns a single merged result list with an `in_corpus` flag showing which papers are in the local index.
