@@ -1,13 +1,8 @@
 ---
 name: clinical-trial-design
 description: ToolUniverse workflow — Clinical Trial Design
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-clinical-trial-design
 metadata:
----
-
----
-name: tooluniverse-clinical-trial-design
-description: Strategic clinical trial design feasibility assessment using ToolUniverse. Evaluates patient population sizing, biomarker prevalence, endpoint selection, comparator analysis, safety monitoring, and regulatory pathways. Creates comprehensive feasibility reports with evidence grading, enrollment projections, and trial design recommendations. Use when planning Phase 1/2 trials, assessing trial feasibility, or designing biomarker-driven studies.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-clinical-trial-design
 ---
 
 # Clinical Trial Design Feasibility Assessment
