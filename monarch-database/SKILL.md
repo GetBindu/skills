@@ -5,7 +5,6 @@ license: CC0-1.0
 metadata:
     skill-author: Kuan-lin Huang
 ---
-
 # Monarch Initiative Database
 
 ## Overview

@@ -1,0 +1,24 @@
+# monarch-database
+
+Query the Monarch Initiative knowledge graph for disease-gene-phenotype associations across species.
+
+## Setup
+
+```bash
+cd monarch-database
+python3 -m venv .venv && source .venv/bin/activate && pip install requests -q
+```
+
+## Environment variables
+
+None.
+
+## Usage
+
+```bash
+python3 scripts/query.py --help
+```
+
+## Dependencies
+
+- `requests`
