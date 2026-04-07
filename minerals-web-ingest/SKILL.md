@@ -10,7 +10,6 @@ metadata:
       env:
         - FIRECRAWL_API_KEY
 ---
-
 # Minerals Web Ingest
 
 Fetch and normalize full-page content from discovered URLs, deduplicate by content hash, and emit records suitable for indexing and analysis.
