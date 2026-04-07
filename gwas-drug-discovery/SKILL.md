@@ -1,13 +1,8 @@
 ---
 name: gwas-drug-discovery
 description: ToolUniverse workflow — Gwas Drug Discovery
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gwas-drug-discovery
 metadata:
----
-
----
-name: tooluniverse-gwas-drug-discovery
-description: Transform GWAS signals into actionable drug targets and repurposing opportunities. Performs locus-to-gene mapping, target druggability assessment, existing drug identification, safety profile evaluation, and clinical trial matching. Use when discovering drug targets from GWAS data, finding drug repurposing opportunities from genetic associations, or translating GWAS findings into therapeutic leads.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gwas-drug-discovery
 ---
 
 # GWAS-to-Drug Target Discovery
