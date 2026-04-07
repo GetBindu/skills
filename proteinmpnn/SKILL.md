@@ -3,7 +3,6 @@ name: proteinmpnn
 description: ProteinMPNN sequence design for inverse folding and protein sequence generation
 metadata: {}
 ---
-
 # ProteinMPNN Sequence Design
 
 Inverse folding: design protein sequences that fold into a given backbone structure. Use after RFdiffusion backbone generation or to redesign existing protein sequences.
