@@ -10,7 +10,6 @@ metadata:
       env:
         - UNCOMTRADE_API_KEY
 ---
-
 # UN Comtrade Trade Data
 
 Query UN Comtrade for bilateral trade flows of critical minerals. Returns trade values (USD), net weight (kg), and flow direction (imports/exports) by HS commodity code, reporter country, partner country, and year.
