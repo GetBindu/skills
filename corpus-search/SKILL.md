@@ -10,7 +10,6 @@ metadata:
       env:
         - PINECONE_API_KEY
 ---
-
 # Corpus Search — Critical Minerals PDF Corpus
 
 Semantic search over a local collection of critical minerals PDFs (USGS, UN Comtrade, World Bank, SEC, WTO, Mindat, MinCan reports). Documents are chunked, embedded with `llama-text-embed-v2`, and stored in a Pinecone index for fast similarity search.
