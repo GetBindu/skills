@@ -1,13 +1,8 @@
 ---
 name: drug-research
 description: ToolUniverse workflow — Drug Research
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-drug-research
 metadata:
----
-
----
-name: tooluniverse-drug-research
-description: Generates comprehensive drug research reports with compound disambiguation, evidence grading, and mandatory completeness sections. Covers identity, chemistry, pharmacology, targets, clinical trials, safety, pharmacogenomics, and ADMET properties. Use when users ask about drugs, medications, therapeutics, or need drug profiling, safety assessment, or clinical development research.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-drug-research
 ---
 
 # Drug Research Strategy
