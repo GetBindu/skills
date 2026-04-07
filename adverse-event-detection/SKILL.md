@@ -1,13 +1,8 @@
 ---
 name: adverse-event-detection
 description: ToolUniverse workflow — Adverse Event Detection
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-adverse-event-detection
 metadata:
----
-
----
-name: tooluniverse-adverse-event-detection
-description: Detect and analyze adverse drug event signals using FDA FAERS data, drug labels, disproportionality analysis (PRR, ROR, IC), and biomedical evidence. Generates quantitative safety signal scores (0-100) with evidence grading. Use for post-market surveillance, pharmacovigilance, drug safety assessment, adverse event investigation, and regulatory decision support.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-adverse-event-detection
 ---
 
 # Adverse Drug Event Signal Detection & Analysis
