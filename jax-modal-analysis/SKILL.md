@@ -6,7 +6,6 @@ metadata:
   requires: stl_modal_pipeline, tetgen, pyvista, meshio, trimesh, scipy, jax
   conda_env: jax_fem
 ---
-
 # JAX 3D Modal Analysis
 
 Full 3D tetrahedral FEM eigenvalue solver for ribbed membrane resonators.
