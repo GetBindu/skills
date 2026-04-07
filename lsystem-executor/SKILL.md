@@ -3,7 +3,6 @@ name: lsystem-executor
 description: Execute L-system and shape grammars to produce visual derivations, SVG/PNG renders, and optional STL meshes
 metadata:
 ---
-
 # L-System Executor
 
 Execute parametric L-system grammars and render the results as images or meshes.
