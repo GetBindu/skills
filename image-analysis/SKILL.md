@@ -1,13 +1,8 @@
 ---
 name: image-analysis
 description: ToolUniverse workflow — Image Analysis
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-image-analysis
 metadata:
----
-
----
-name: tooluniverse-image-analysis
-description: Production-ready microscopy image analysis and quantitative imaging data skill for colony morphometry, cell counting, fluorescence quantification, and statistical analysis of imaging-derived measurements. Processes ImageJ/CellProfiler output (area, circularity, intensity, cell counts), performs Dunnett's test, Cohen's d effect size, power analysis, Shapiro-Wilk normality tests, two-way ANOVA, polynomial regression, natural spline regression with confidence intervals, and comparative morphometry. Supports CSV/TSV measurement tables, multi-channel fluorescence data, colony swarming assays, and neuron counting datasets. Use when analyzing microscopy measurement data, colony area/circularity, cell count statistics, swarming assays, co-culture ratio optimization, or answering questions about imaging-derived quantitative data.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-image-analysis
 ---
 
 # Microscopy Image Analysis and Quantitative Imaging Data
