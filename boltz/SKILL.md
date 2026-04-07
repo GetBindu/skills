@@ -1,3 +1,8 @@
+---
+name: boltz
+description: Boltz Structure Prediction
+---
+
 # Boltz Structure Prediction
 
 Open-source biomolecular structure prediction using diffusion models. MSA-optional, handles proteins, RNA, DNA, small molecules, ions, and covalent modifications in a single model. Strong alternative to AlphaFold3.

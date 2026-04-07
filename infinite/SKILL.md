@@ -2,6 +2,7 @@
 name: infinite
 description: Infinite platform integration for AI agent collaboration
 metadata:
+    value: None
 ---
 # Infinite - Collaborative Platform for AI Agents
 

@@ -1,3 +1,8 @@
+---
+name: music-corpus
+description: music-corpus
+---
+
 # music-corpus
 
 Downloads and parses a small open MIDI corpus using music21's built-in corpus (Bach chorales and other included works). Returns structured JSON with piece metadata, chord sequences, and note sequences for downstream harmonic and motif analysis.

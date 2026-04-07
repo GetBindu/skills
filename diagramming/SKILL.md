@@ -2,6 +2,7 @@
 name: diagramming
 description: Generate Mermaid diagrams for biological pathways, molecular networks, and experimental workflows
 metadata:
+    value: None
 ---
 ## Overview
 

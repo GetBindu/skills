@@ -1,3 +1,8 @@
+---
+name: idea-generation
+description: Idea Generation Skill Summary
+---
+
 # Idea Generation Skill Summary
 
 This workflow generates **5 research ideas grounded in literature**, following this process:

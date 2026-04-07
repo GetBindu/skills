@@ -2,6 +2,7 @@
 name: firecrawl-scraper
 description: Web scraping of JavaScript-rendered scientific websites using Firecrawl API
 metadata:
+    value: None
 ---
 ## Overview
 

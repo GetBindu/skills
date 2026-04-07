@@ -1,3 +1,8 @@
+---
+name: hedgefundmonitor
+description: Hedge Fund Monitor
+---
+
 # Hedge Fund Monitor
 
 OFR (Office of Financial Research) Hedge Fund Monitor REST API. Free, no authentication required. Provides regulatory data from SEC Form PF, CFTC futures positions, and FICC repo market.

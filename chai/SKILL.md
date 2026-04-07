@@ -1,3 +1,8 @@
+---
+name: chai
+description: Chai-1 Structure Prediction
+---
+
 # Chai-1 Structure Prediction
 
 Foundation model for molecular structure prediction. Handles proteins, nucleic acids, small molecules, and complexes. Fast inference, strong multimer performance, available via API and local install.

@@ -1,3 +1,8 @@
+---
+name: binder-design
+description: Binder Design Tool Selection
+---
+
 # Binder Design Tool Selection
 
 Decision framework for choosing between BoltzGen, RFdiffusion, BindCraft, and other tools for protein binder design campaigns.

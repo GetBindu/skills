@@ -2,6 +2,7 @@
 name: docx
 description: Extract text, tables, headings, and metadata from Microsoft Word .docx files
 metadata:
+    value: None
 ---
 ## Overview
 

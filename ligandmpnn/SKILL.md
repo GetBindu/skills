@@ -1,3 +1,8 @@
+---
+name: ligandmpnn
+description: LigandMPNN Ligand-Aware Sequence Design
+---
+
 # LigandMPNN Ligand-Aware Sequence Design
 
 Extends ProteinMPNN to design sequences around small molecules, metal ions, nucleic acids, and other non-protein entities. Essential for enzyme active site design and ligand-binding protein engineering.

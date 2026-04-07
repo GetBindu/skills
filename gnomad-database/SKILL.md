@@ -1,3 +1,8 @@
+---
+name: gnomad-database
+description: gnomAD Database Skill Overview
+---
+
 # gnomAD Database Skill Overview
 
 The provided content documents a Claude agent skill for querying the **Genome Aggregation Database (gnomAD)**. This resource enables genetic variant interpretation through population frequency data and constraint metrics.

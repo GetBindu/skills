@@ -1,3 +1,8 @@
+---
+name: metabolism-init
+description: Metabolism Initialization Skill Overview
+---
+
 # Metabolism Initialization Skill Overview
 
 This skill enables **knowledge metabolism initialization** for research topics through a structured Day 0 baseline-building process.

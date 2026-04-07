@@ -1,3 +1,8 @@
+---
+name: gtex-database
+description: GTEx Database Skill Summary
+---
+
 # GTEx Database Skill Summary
 
 ## Purpose

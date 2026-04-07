@@ -1,3 +1,8 @@
+---
+name: tiledbvcf
+description: TileDB-VCF
+---
+
 # TileDB-VCF
 
 Scalable genomic variant storage and retrieval using TileDB arrays. Handles population-scale VCF/BCF datasets with parallel queries and cloud storage support (S3, Azure Blob, GCS).

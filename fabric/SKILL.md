@@ -2,6 +2,7 @@
 name: fabric
 description: Pattern-based analysis using Fabric's 242+ specialized prompts for summarizing papers and extracting insights
 metadata:
+    value: None
 ---
 ## Overview
 

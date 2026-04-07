@@ -1,3 +1,8 @@
+---
+name: midi-generator
+description: midi-generator
+---
+
 # midi-generator
 
 Generates MIDI files from motif JSON or cluster centroids using music21. Outputs base64-encoded MIDI bytes plus saves a .mid file to ~/.scienceclaw/midi/.

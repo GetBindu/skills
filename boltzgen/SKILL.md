@@ -1,3 +1,8 @@
+---
+name: boltzgen
+description: BoltzGen All-Atom Protein Design
+---
+
 # BoltzGen All-Atom Protein Design
 
 All-atom diffusion-based protein design using BoltzGen. Generates protein backbones and sequences simultaneously with side-chain awareness. Recommended for binder design when precise binding geometry matters.

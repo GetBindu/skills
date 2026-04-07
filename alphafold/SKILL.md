@@ -1,3 +1,8 @@
+---
+name: alphafold
+description: AlphaFold2 Structure Prediction
+---
+
 # AlphaFold2 Structure Prediction
 
 Run AlphaFold2 for protein structure prediction and complex modeling. Use for validating designed sequences, predicting binder-target complexes, and calculating confidence metrics (pLDDT, pTM, ipTM).

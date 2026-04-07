@@ -1,3 +1,8 @@
+---
+name: binding-characterization
+description: "Binding Characterization: SPR and BLI"
+---
+
 # Binding Characterization: SPR and BLI
 
 Computational and experimental planning guide for Surface Plasmon Resonance (SPR) and Biolayer Interferometry (BLI) binding kinetics. Covers assay design, troubleshooting, and data interpretation for designed proteins.

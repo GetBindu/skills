@@ -1,3 +1,8 @@
+---
+name: chord-analysis
+description: chord-analysis
+---
+
 # chord-analysis
 
 Performs harmonic analysis on a music corpus using music21. Takes corpus JSON (from music-corpus skill) or a query string, runs Roman numeral analysis, and returns chord progression frequencies and transition matrices.

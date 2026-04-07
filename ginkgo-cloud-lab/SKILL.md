@@ -1,3 +1,8 @@
+---
+name: ginkgo-cloud-lab
+description: Ginkgo Cloud Lab SKILL Summary
+---
+
 # Ginkgo Cloud Lab SKILL Summary
 
 **Platform Overview:**

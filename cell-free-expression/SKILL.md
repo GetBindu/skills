@@ -1,3 +1,8 @@
+---
+name: cell-free-expression
+description: Cell-Free Protein Synthesis (CFPS)
+---
+
 # Cell-Free Protein Synthesis (CFPS)
 
 Cell-free protein synthesis system selection, optimization, and troubleshooting for expressing designed proteins without living cells. Ideal for toxic proteins, rapid prototyping, and non-standard amino acid incorporation.

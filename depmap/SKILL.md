@@ -1,3 +1,8 @@
+---
+name: depmap
+description: DepMap — Cancer Dependency Map Skill Summary
+---
+
 # DepMap — Cancer Dependency Map Skill Summary
 
 ## Overview

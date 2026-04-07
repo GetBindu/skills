@@ -1,3 +1,8 @@
+---
+name: foldseek
+description: Foldseek Structure Similarity Search
+---
+
 # Foldseek Structure Similarity Search
 
 Ultra-fast protein structure similarity search. Finds structural homologs in PDB, AlphaFold Database, and custom databases orders of magnitude faster than DALI or TM-align.

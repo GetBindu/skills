@@ -1,3 +1,8 @@
+---
+name: arxiv-database
+description: arXiv Database Skill Summary
+---
+
 # arXiv Database Skill Summary
 
 This CLI skill enables searching and retrieving academic preprints from arXiv.org through its public Atom API. It's maintained by Orchestra Research under an MIT license.

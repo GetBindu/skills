@@ -2,6 +2,7 @@
 name: browser-automation
 description: Playwright-based browser automation for scraping JavaScript-rendered scientific databases
 metadata:
+    value: None
 ---
 ## Overview
 

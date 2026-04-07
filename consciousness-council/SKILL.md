@@ -1,3 +1,8 @@
+---
+name: consciousness-council
+description: Consciousness Council Skill Summary
+---
+
 # Consciousness Council Skill Summary
 
 ## Overview

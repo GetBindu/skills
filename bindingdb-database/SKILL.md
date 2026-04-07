@@ -1,3 +1,8 @@
+---
+name: bindingdb-database
+description: BindingDB Database Skill Summary
+---
+
 # BindingDB Database Skill Summary
 
 ## Overview

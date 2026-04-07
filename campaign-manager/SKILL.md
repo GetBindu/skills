@@ -1,3 +1,8 @@
+---
+name: campaign-manager
+description: Campaign Manager
+---
+
 # Campaign Manager
 
 Goal-oriented protein design campaign planning. Converts abstract objectives into concrete computational pipelines with cost/time estimates, health monitoring, and adaptive decision-making.

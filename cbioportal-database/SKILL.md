@@ -1,3 +1,8 @@
+---
+name: cbioportal-database
+description: cBioPortal Database SKILL.md
+---
+
 # cBioPortal Database SKILL.md
 
 ```markdown

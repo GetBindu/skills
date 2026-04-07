@@ -2,6 +2,7 @@
 name: cas
 description: Look up chemicals in CAS Common Chemistry (name, CAS RN, SMILES, InChI; ~500k compounds)
 metadata:
+    value: None
 ---
 # CAS Common Chemistry
 

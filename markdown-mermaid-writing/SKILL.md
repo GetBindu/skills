@@ -1,3 +1,8 @@
+---
+name: markdown-mermaid-writing
+description: Markdown + Mermaid Writing
+---
+
 # Markdown + Mermaid Writing
 
 Create scientific documentation with Mermaid diagrams embedded in Markdown. Renders natively on GitHub, GitLab, Notion, Obsidian, and VS Code without build steps.

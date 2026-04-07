@@ -2,6 +2,7 @@
 name: datavis
 description: Create scientific plots and visualizations using matplotlib and seaborn
 metadata:
+    value: None
 ---
 # Scientific Data Visualization
 

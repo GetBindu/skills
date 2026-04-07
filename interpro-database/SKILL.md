@@ -1,3 +1,8 @@
+---
+name: interpro-database
+description: InterPro Database Skill Documentation
+---
+
 # InterPro Database Skill Documentation
 
 ## Overview

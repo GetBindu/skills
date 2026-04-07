@@ -1,3 +1,8 @@
+---
+name: bgpt-paper-search
+description: BGPT Paper Search
+---
+
 # BGPT Paper Search
 
 BioGPT-powered scientific paper search returning 25+ structured fields per paper including extracted methods, results, sample sizes, and quality scores. Superior to basic PubMed search for structured data extraction.

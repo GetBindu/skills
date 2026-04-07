@@ -1,3 +1,8 @@
+---
+name: ipsae
+description: ipSAE Binder Design Ranking
+---
+
 # ipSAE Binder Design Ranking
 
 ipSAE (Interprotein Score from Aligned Errors) — ranking metric for binder designs that outperforms ipTM and iPAE for predicting experimental binding success. Derived from AF2/Boltz/Chai PAE matrices.

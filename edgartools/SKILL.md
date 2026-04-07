@@ -1,3 +1,8 @@
+---
+name: edgartools
+description: EDGARTools
+---
+
 # EDGARTools
 
 Python library for accessing SEC EDGAR filings (1994–present). Company financials, insider trading, institutional holdings, and more without manual EDGAR navigation.

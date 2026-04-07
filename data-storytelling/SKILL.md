@@ -2,6 +2,7 @@
 name: data-storytelling
 description: Transform scientific findings into compelling research narratives for papers, grants, and presentations
 metadata:
+    value: None
 ---
 ## Overview
 
