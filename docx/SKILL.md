@@ -3,7 +3,6 @@ name: docx
 description: Extract text, tables, headings, and metadata from Microsoft Word .docx files
 metadata:
 ---
-
 ## Overview
 
 Microsoft Word document processing toolkit for extracting text, tables, headings, and metadata from .docx files. Useful for analyzing scientific manuscripts, grant applications, protocols, and supplementary documents shared in Word format.
