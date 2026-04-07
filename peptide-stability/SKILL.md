@@ -4,7 +4,6 @@ description: Compute quick peptide stability/solubility heuristics (net charge, 
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Peptide Stability
 
 Simple, fast heuristics meant for ranking candidates in a demo.
