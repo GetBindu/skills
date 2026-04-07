@@ -4,11 +4,6 @@ description: ToolUniverse workflow — Precision Oncology
 metadata: {}
 ---
 
----
-name: tooluniverse-precision-oncology
-description: Provide actionable treatment recommendations for cancer patients based on molecular profile. Interprets tumor mutations, identifies FDA-approved therapies, finds resistance mechanisms, matches clinical trials. Use when oncologist asks about treatment options for specific mutations (EGFR, KRAS, BRAF, etc.), therapy resistance, or clinical trial eligibility.
----
-
 # Precision Oncology Treatment Advisor
 
 Provide actionable treatment recommendations for cancer patients based on their molecular profile using CIViC, ClinVar, OpenTargets, ClinicalTrials.gov, and structure-based analysis.
