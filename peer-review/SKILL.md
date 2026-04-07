@@ -6,7 +6,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Scientific Critical Evaluation and Peer Review
 
 ## Overview
