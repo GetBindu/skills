@@ -5,7 +5,6 @@ metadata:
   category: materials-design
   requires: numpy, scipy
 ---
-
 # FEM Modal Analysis
 
 Kirchhoff thin-plate finite element modal analysis for ribbed membrane resonators.
