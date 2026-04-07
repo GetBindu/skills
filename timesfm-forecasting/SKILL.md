@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # TimesFM Forecasting
 
 Google TimesFM 2.5 — 200M parameter foundation model for zero-shot univariate time series forecasting. No training required; works out-of-the-box on new datasets.
