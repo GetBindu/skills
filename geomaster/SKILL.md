@@ -5,7 +5,6 @@ license: MIT
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # GeoMaster — Geospatial Science Skill
 
 ## Overview
