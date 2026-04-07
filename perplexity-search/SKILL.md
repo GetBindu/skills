@@ -6,7 +6,6 @@ compatibility: An OpenRouter API key is required to use Perplexity search
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Perplexity Search
 
 ## Overview
