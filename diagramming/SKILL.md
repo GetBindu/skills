@@ -3,7 +3,6 @@ name: diagramming
 description: Generate Mermaid diagrams for biological pathways, molecular networks, and experimental workflows
 metadata:
 ---
-
 ## Overview
 
 Generate technical diagrams using Mermaid syntax for biological pathways, molecular networks, experimental workflows, and research architecture. Outputs Mermaid code ready for rendering in GitHub, Notion, Obsidian, or any Mermaid-compatible renderer.
