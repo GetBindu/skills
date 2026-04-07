@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # BGS World Mineral Statistics
 
 Query the British Geological Survey's World Mineral Statistics database for mineral production, imports, and exports by commodity, country, and year. Covers global mineral data with country-level breakdowns.
