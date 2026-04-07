@@ -1,13 +1,8 @@
 ---
 name: gwas-trait-to-gene
 description: ToolUniverse workflow — Gwas Trait To Gene
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gwas-trait-to-gene
 metadata:
----
-
----
-name: tooluniverse-gwas-trait-to-gene
-description: Discover genes associated with diseases and traits using GWAS data from the GWAS Catalog (500,000+ associations) and Open Targets Genetics (L2G predictions). Identifies genetic risk factors, prioritizes causal genes via locus-to-gene scoring, and assesses druggability. Use when asked to find genes associated with a disease or trait, discover genetic risk factors, translate GWAS signals to gene targets, or answer questions like "What genes are associated with type 2 diabetes?"
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gwas-trait-to-gene
 ---
 
 # GWAS Trait-to-Gene Discovery
