@@ -3,7 +3,6 @@ name: firecrawl-scraper
 description: Web scraping of JavaScript-rendered scientific websites using Firecrawl API
 metadata:
 ---
-
 ## Overview
 
 Web scraping using the Firecrawl API for JavaScript-rendered scientific websites, database pages, and literature sources. Returns clean Markdown content optimized for LLM processing. Handles dynamic content, authentication flows, and complex single-page applications that static scrapers cannot access.
