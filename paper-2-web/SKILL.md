@@ -6,7 +6,6 @@ license: Unknown
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Paper2All: Academic Paper Transformation Pipeline
 
 ## Overview
