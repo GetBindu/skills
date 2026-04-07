@@ -8,7 +8,6 @@ metadata:
     idc-index: "0.11.7"
     repository: https://github.com/ImagingDataCommons/idc-claude-skill
 ---
-
 # Imaging Data Commons
 
 ## Overview
