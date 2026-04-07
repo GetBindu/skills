@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Research Experiment Skill Summary
 
 This skill defines a workflow for conducting comprehensive research experiments in machine learning projects. Here's the concise breakdown:
