@@ -1,12 +1,12 @@
 ---
 name: autoresearch
 description: Autonomous AI agent that modifies and iteratively improves a GPT language model training setup, running experiments within a 5-minute time budget to optimize validation bits-per-byte.
-source_type: github
-auth_required: false
-repository_url: "https://github.com/karpathy/autoresearch"
-reference_url: "https://github.com/karpathy/nanochat"
+metadata:
+    source_type: github
+    auth_required: false
+    repository_url: https://github.com/karpathy/autoresearch
+    reference_url: https://github.com/karpathy/nanochat
 ---
-
 ## autoresearch
 
 Autonomous AI agent that modifies and iteratively improves a GPT language model training setup, running experiments within a 5-minute time budget to optimize validation bits-per-byte.
