@@ -6,7 +6,6 @@ license: MIT License
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Citation Management
 
 ## Overview
