@@ -1,13 +1,8 @@
 ---
 name: literature-deep-research
 description: ToolUniverse workflow — Literature Deep Research
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-literature-deep-research
 metadata:
----
-
----
-name: tooluniverse-literature-deep-research
-description: Conduct comprehensive literature research with target disambiguation, evidence grading, and structured theme extraction. Creates a detailed report with mandatory completeness checklist, biological model synthesis, and testable hypotheses. For biological targets, resolves official IDs (Ensembl/UniProt), synonyms, naming collisions, and gathers expression/pathway context before literature search. Default deliverable is a report file; for single factoid questions, uses a fast verification mode and may include an inline answer. Use when users need thorough literature reviews, target profiles, or to verify specific claims from the literature.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-literature-deep-research
 ---
 
 # Literature Deep Research Strategy (Enhanced)
