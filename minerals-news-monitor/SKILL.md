@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Minerals News Monitor
 
 Discover relevant links from newspapers, blogs, and industry outlets for critical minerals and materials topics.
