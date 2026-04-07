@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Claude Code Research Review Guide
 
 This document outlines a comprehensive peer review workflow for ML research implementations, with three key phases:
