@@ -1,12 +1,12 @@
 ---
 name: dreams
 description: Agentic materials discovery and DFT simulation framework using ASE, Quantum ESPRESSO, and Claude LLMs via LangGraph.
-source_type: github
-auth_required: true
-repository_url: "https://github.com/BattModels/material_agent"
-reference_url: "https://arxiv.org/abs/2507.14267"
+metadata:
+    source_type: github
+    auth_required: true
+    repository_url: https://github.com/BattModels/material_agent
+    reference_url: https://arxiv.org/abs/2507.14267
 ---
-
 ## dreams
 
 Agentic materials discovery and DFT simulation framework using ASE, Quantum ESPRESSO, and Claude LLMs via LangGraph.
