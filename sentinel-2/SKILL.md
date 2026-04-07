@@ -7,7 +7,6 @@ metadata:
     source: https://scihub.copernicus.eu
     requires-env: COPERNICUS_USER, COPERNICUS_PASSWORD
 ---
-
 # Sentinel-2 Satellite Imagery
 
 Access high-resolution multispectral satellite imagery for agricultural monitoring.
