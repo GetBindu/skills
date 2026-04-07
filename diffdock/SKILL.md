@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # DiffDock: Molecular Docking with Diffusion Models
 
 ## Overview
