@@ -3,7 +3,6 @@ name: data-storytelling
 description: Transform scientific findings into compelling research narratives for papers, grants, and presentations
 metadata:
 ---
-
 ## Overview
 
 Transforms scientific data and findings into compelling research narratives with clear structure, effective framing, and audience-appropriate communication. Generates structured narratives for academic papers, grant applications, conference presentations, and press releases.
