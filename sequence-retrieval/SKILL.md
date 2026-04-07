@@ -6,7 +6,6 @@ metadata:
     skill-author: K-Dense Inc.
     source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-sequence-retrieval
 ---
-
 # Biological Sequence Retrieval
 
 Retrieve DNA, RNA, and protein sequences with proper disambiguation and cross-database handling.
