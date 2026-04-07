@@ -5,7 +5,6 @@ license: MIT
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # DHDNA Profiler — Cognitive Pattern Extraction
 
 ## Overview
