@@ -6,7 +6,6 @@ compatibility: API required
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Rowan: Cloud-Based Quantum Chemistry Platform
 
 ## Overview
