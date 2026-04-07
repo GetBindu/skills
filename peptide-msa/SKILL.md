@@ -4,7 +4,6 @@ description: Perform a simple multiple-sequence alignment (MSA) for short peptid
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Peptide MSA
 
 Lightweight MSA intended for peptides (≈6–40 aa). Produces:
