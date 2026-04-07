@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Sequence Analysis
 
 Analyze biological sequences using Biopython. Translate DNA, compute statistics, parse sequence files, and perform basic alignments.
