@@ -1,0 +1,7 @@
+# foldseek
+
+
+
+## Environment variables
+
+None.
