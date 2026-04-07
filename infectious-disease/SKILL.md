@@ -1,13 +1,8 @@
 ---
 name: infectious-disease
 description: ToolUniverse workflow — Infectious Disease
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-infectious-disease
 metadata:
----
-
----
-name: tooluniverse-infectious-disease
-description: Rapid pathogen characterization and drug repurposing analysis for infectious disease outbreaks. Identifies pathogen taxonomy, essential proteins, predicts structures, and screens existing drugs via docking. Use when facing novel pathogens, emerging infections, or needing rapid therapeutic options during outbreaks.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-infectious-disease
 ---
 
 # Infectious Disease Outbreak Intelligence
