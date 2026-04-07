@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # PyTorch Geometric (PyG)
 
 ## Overview
