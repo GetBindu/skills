@@ -4,7 +4,6 @@ description: Identify peptide–protein contact hotspots from a PDB structure (l
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Structure Contact Analysis
 
 Given a PDB ID (or a local PDB file), compute residue-level contacts between a short peptide chain and a protein chain.
