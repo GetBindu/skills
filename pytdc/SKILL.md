@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # PyTDC (Therapeutics Data Commons)
 
 ## Overview
