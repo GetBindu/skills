@@ -3,7 +3,6 @@ name: protein-design-workflow
 description: End-to-end pipeline guidance for protein design projects
 metadata: {}
 ---
-
 # Protein Design Workflow
 
 End-to-end pipeline guidance for protein design projects. Covers target preparation, design strategy selection, computational pipeline execution, and quality control.
