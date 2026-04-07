@@ -4,11 +4,6 @@ description: ToolUniverse workflow — Protein Structure Retrieval
 metadata: {}
 ---
 
----
-name: tooluniverse-protein-structure-retrieval
-description: Retrieves protein structure data from RCSB PDB, PDBe, and AlphaFold with protein disambiguation, quality assessment, and comprehensive structural profiles. Creates detailed structure reports with experimental metadata, ligand information, and download links. Use when users need protein structures, 3D models, crystallography data, or mention PDB IDs (4-character codes like 1ABC) or UniProt accessions.
----
-
 # Protein Structure Data Retrieval
 
 Retrieve protein structures with proper disambiguation, quality assessment, and comprehensive metadata.
