@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 ## softjax
 
 Soft differentiable drop-in replacements for non-differentiable JAX functions (abs, relu, sort, argmax, comparison, logical operators, etc.) with adjustable softening strength.
