@@ -5,7 +5,6 @@ license: BSD-2-Clause license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Geniml: Genomic Interval Machine Learning
 
 ## Overview
