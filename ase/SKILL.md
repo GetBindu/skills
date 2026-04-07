@@ -6,7 +6,6 @@ metadata:
     skill-author: K-Dense Inc.
     domain: computational-chemistry, materials-science
 ---
-
 # Atomic Simulation Environment (ASE)
 
 ## Overview
