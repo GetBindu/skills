@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Minerals Visualization
 
 Generate publication-quality charts for critical minerals data using the cmm_data visualizations module. Supports world production bar charts, production time series, import reliance charts, and multi-commodity comparisons.
