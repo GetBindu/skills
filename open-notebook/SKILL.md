@@ -3,7 +3,6 @@ name: open-notebook
 description: Self-hosted research platform for organizing PDFs, videos, audio, web pages with AI-powered chat
 metadata: {}
 ---
-
 # Open Notebook
 
 ## Features
