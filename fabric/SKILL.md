@@ -3,7 +3,6 @@ name: fabric
 description: Pattern-based analysis using Fabric's 242+ specialized prompts for summarizing papers and extracting insights
 metadata:
 ---
-
 ## Overview
 
 Pattern-based analysis framework with 242+ specialized prompts (Fabric patterns) for summarizing papers, extracting insights, threat modeling, and content analysis. Executes Fabric CLI patterns against text input or file content for rapid structured analysis.
