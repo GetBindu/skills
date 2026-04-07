@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # OSTI Database Search
 
 Search the U.S. Department of Energy's Office of Scientific and Technical Information (OSTI.gov) for technical reports, journal articles, and conference papers. Covers 1,100+ DOE-funded documents across critical mineral categories including rare earth elements, lithium, cobalt, nickel, copper, gallium, germanium, and graphite.
