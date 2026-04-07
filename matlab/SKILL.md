@@ -6,7 +6,6 @@ compatibility: Requires either MATLAB or Octave to be installed for testing, but
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # MATLAB/Octave Scientific Computing
 
 MATLAB is a numerical computing environment optimized for matrix operations and scientific computing. GNU Octave is a free, open-source alternative with high MATLAB compatibility.
