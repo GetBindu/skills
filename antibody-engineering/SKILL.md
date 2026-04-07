@@ -1,13 +1,8 @@
 ---
 name: antibody-engineering
 description: ToolUniverse workflow — Antibody Engineering
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-antibody-engineering
 metadata:
----
-
----
-name: tooluniverse-antibody-engineering
-description: Comprehensive antibody engineering and optimization for therapeutic development. Covers humanization, affinity maturation, developability assessment, and immunogenicity prediction. Use when asked to optimize antibodies, humanize sequences, or engineer therapeutic antibodies from lead to clinical candidate.
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-antibody-engineering
 ---
 
 # Antibody Engineering & Optimization
