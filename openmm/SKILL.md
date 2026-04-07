@@ -6,7 +6,6 @@ metadata:
     skill-author: K-Dense Inc.
     domain: computational-chemistry, biomolecular-simulation
 ---
-
 # OpenMM Molecular Dynamics Engine
 
 ## Overview
