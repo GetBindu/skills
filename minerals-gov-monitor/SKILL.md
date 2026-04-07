@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Minerals Government Monitor
 
 Monitor policy and release signals from government and regulator domains (US, EU, UK, Canada, Australia, OECD by default).
