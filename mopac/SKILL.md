@@ -6,7 +6,6 @@ metadata:
     skill-author: K-Dense Inc.
     domain: computational-chemistry, quantum-chemistry
 ---
-
 # MOPAC Semi-Empirical Quantum Chemistry
 
 ## Overview
