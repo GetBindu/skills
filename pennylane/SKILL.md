@@ -5,7 +5,6 @@ license: Apache-2.0 license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # PennyLane
 
 ## Overview
