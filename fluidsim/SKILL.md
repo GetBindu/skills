@@ -5,7 +5,6 @@ license: CeCILL FREE SOFTWARE LICENSE AGREEMENT
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # FluidSim
 
 ## Overview
