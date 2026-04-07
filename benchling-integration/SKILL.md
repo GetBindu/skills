@@ -6,7 +6,6 @@ compatibility: Requires a Benchling account and API key
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Benchling Integration
 
 ## Overview
