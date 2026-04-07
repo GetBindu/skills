@@ -5,7 +5,6 @@ license: 3-clause BSD license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # NetworkX
 
 ## Overview
