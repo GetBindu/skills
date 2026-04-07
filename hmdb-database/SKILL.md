@@ -5,7 +5,6 @@ license: HMDB is offered to the public as a freely available resource. Use and r
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # HMDB Database
 
 ## Overview
