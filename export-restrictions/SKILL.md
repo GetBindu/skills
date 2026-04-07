@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Export Restrictions on Raw Materials
 
 Query OECD export restriction data and policies on industrial raw materials. Combines structured metadata from the OECD Supply Chain dataset with semantic search over policy documents in the local corpus. Covers 65 commodities across 82 countries from 2009-2023.
