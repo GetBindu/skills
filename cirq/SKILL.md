@@ -5,7 +5,6 @@ license: Apache-2.0 license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Cirq - Quantum Computing with Python
 
 Cirq is Google Quantum AI's open-source framework for designing, simulating, and running quantum circuits on quantum computers and simulators.
