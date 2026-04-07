@@ -6,7 +6,6 @@ compatibility: Requires an OpenRouter API key
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Generate Image
 
 Generate and edit high-quality images using OpenRouter's image generation models including FLUX.2 Pro and Gemini 3 Pro.
