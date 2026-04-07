@@ -5,7 +5,6 @@ license: Unknown
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Gtars: Genomic Tools and Algorithms in Rust
 
 ## Overview
