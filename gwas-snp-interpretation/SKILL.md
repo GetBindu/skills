@@ -1,13 +1,8 @@
 ---
 name: gwas-snp-interpretation
 description: ToolUniverse workflow — Gwas Snp Interpretation
-source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gwas-snp-interpretation
 metadata:
----
-
----
-name: tooluniverse-gwas-snp-interpretation
-description: Interpret genetic variants (SNPs) from GWAS studies by aggregating evidence from multiple databases (GWAS Catalog, Open Targets Genetics, ClinVar). Retrieves variant annotations, GWAS trait associations, fine-mapping evidence, locus-to-gene predictions, and clinical significance. Use when asked to interpret a SNP by rsID, find disease associations for a variant, assess clinical significance, or answer questions like "What diseases is rs429358 associated with?" or "Interpret rs7903146".
+    source: https://github.com/mims-harvard/ToolUniverse/tree/main/skills/tooluniverse-gwas-snp-interpretation
 ---
 
 # GWAS SNP Interpretation Skill
