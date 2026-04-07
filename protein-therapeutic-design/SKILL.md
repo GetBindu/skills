@@ -4,11 +4,6 @@ description: ToolUniverse workflow — Protein Therapeutic Design
 metadata: {}
 ---
 
----
-name: tooluniverse-protein-therapeutic-design
-description: Design novel protein therapeutics (binders, enzymes, scaffolds) using AI-guided de novo design. Uses RFdiffusion for backbone generation, ProteinMPNN for sequence design, ESMFold/AlphaFold2 for validation. Use when asked to design protein binders, therapeutic proteins, or engineer protein function.
----
-
 # Therapeutic Protein Designer
 
 AI-guided de novo protein design using RFdiffusion backbone generation, ProteinMPNN sequence optimization, and structure validation for therapeutic protein development.
