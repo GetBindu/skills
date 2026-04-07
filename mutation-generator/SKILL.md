@@ -4,7 +4,6 @@ description: Generate conservative vs aggressive peptide mutation variants given
 metadata:
   skill-author: ScienceClaw demo
 ---
-
 # Mutation Generator
 
 Creates a small mutation space for a peptide scaffold.
