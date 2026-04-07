@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Research Subscription Skill Summary
 
 This skill handles **scheduled and recurring tasks** like literature digests, delayed reports, and reminders.
