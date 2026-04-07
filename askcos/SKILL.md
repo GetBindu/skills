@@ -5,7 +5,6 @@ license: MIT License
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # ASKCOS - Retrosynthetic Template Relevance
 
 ## Overview
