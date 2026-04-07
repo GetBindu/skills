@@ -6,7 +6,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # PPTX Research Posters (HTML-Based)
 
 ## Overview
