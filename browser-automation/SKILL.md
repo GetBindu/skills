@@ -3,7 +3,6 @@ name: browser-automation
 description: Playwright-based browser automation for scraping JavaScript-rendered scientific databases
 metadata:
 ---
-
 ## Overview
 
 Web browser automation using Playwright for scraping JavaScript-rendered scientific databases, automating form submissions, and capturing dynamic content unavailable via static scraping. Renders pages fully (including React/Vue/Angular SPAs) and extracts clean text content.
