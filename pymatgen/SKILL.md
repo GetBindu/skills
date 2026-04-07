@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Pymatgen - Python Materials Genomics
 
 ## Overview
