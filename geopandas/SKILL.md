@@ -5,7 +5,6 @@ license: BSD-3-Clause license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # GeoPandas
 
 GeoPandas extends pandas to enable spatial operations on geometric types. It combines the capabilities of pandas and shapely for geospatial data analysis.
