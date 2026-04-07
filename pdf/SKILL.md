@@ -3,7 +3,6 @@ name: pdf
 description: Extract text, tables, and metadata from scientific PDF papers and reports
 metadata: {}
 ---
-
 ## Overview
 
 PDF processing toolkit for extracting text, tables, and metadata from scientific papers, supplementary data files, and technical reports. Uses pdfplumber for high-fidelity text and table extraction with layout preservation, falling back to pypdf when pdfplumber is unavailable.
