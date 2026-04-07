@@ -3,7 +3,6 @@ name: nistwebbook
 description: Look up chemical data from NIST Chemistry WebBook (thermochemistry, spectra, properties)
 metadata: {}
 ---
-
 # NIST Chemistry WebBook
 
 Query the [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/) for thermochemical, spectral, and property data. Data are from NIST Standard Reference Database 69.
