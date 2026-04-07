@@ -5,7 +5,6 @@ license: BSD license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # deepTools: NGS Data Analysis Toolkit
 
 ## Overview
