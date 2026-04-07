@@ -1,12 +1,12 @@
 ---
 name: bioreason_pro
 description: Multimodal reasoning LLM for protein function prediction integrating protein embeddings with biological context to generate structured reasoning traces and functional annotations.
-source_type: github
-auth_required: false
-repository_url: "https://github.com/bowang-lab/BioReason-Pro"
-reference_url: "https://www.biorxiv.org/content/10.64898/2026.03.19.712954v1"
+metadata:
+    source_type: github
+    auth_required: false
+    repository_url: https://github.com/bowang-lab/BioReason-Pro
+    reference_url: https://www.biorxiv.org/content/10.64898/2026.03.19.712954v1
 ---
-
 ## bioreason_pro
 
 Multimodal reasoning LLM for protein function prediction integrating protein embeddings with biological context to generate structured reasoning traces and functional annotations.
