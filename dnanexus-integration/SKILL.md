@@ -6,7 +6,6 @@ compatibility: Requires a DNAnexus account
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # DNAnexus Integration
 
 ## Overview
