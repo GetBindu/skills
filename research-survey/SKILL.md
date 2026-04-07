@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # Research Survey Workflow Summary
 
 This skill activates when a prompt contains `/research-survey` and provides a structured deep-analysis methodology for academic papers.
