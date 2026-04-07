@@ -1,12 +1,12 @@
 ---
 name: doc_to_lora
 description: A method to instantly internalize document contexts into language models using LoRA without fine-tuning.
-source_type: github
-auth_required: true
-repository_url: "https://github.com/SakanaAI/doc-to-lora"
-reference_url: "https://arxiv.org/abs/2602.15902"
+metadata:
+    source_type: github
+    auth_required: true
+    repository_url: https://github.com/SakanaAI/doc-to-lora
+    reference_url: https://arxiv.org/abs/2602.15902
 ---
-
 ## doc_to_lora
 
 A method to instantly internalize document contexts into language models using LoRA without fine-tuning.
