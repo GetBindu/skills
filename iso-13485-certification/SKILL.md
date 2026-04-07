@@ -5,7 +5,6 @@ license: MIT license
 metadata:
     skill-author: K-Dense Inc.
 ---
-
 # ISO 13485 Certification Documentation Assistant
 
 ## Overview
