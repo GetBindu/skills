@@ -8,7 +8,6 @@ metadata:
       bins:
         - python3
 ---
-
 # Substitution Map
 
 Map substitute materials for a critical mineral commodity with trade-off analysis (performance, cost, availability) and supply risk assessment. Uses a curated knowledge base of substitution relationships enriched with live data from BGS production statistics and corpus search.
